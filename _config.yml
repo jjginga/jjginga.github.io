@@ -203,11 +203,7 @@ kramdown:
       start_line: 1
 
 # Includes & excludes
-include: 
-  - about
-  - blog
-  - repositories
-  - cv
+include: ["_pages"]
 exclude:
   - bin
   - CONTRIBUTING.md
