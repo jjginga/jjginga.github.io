@@ -3,38 +3,74 @@
   contents:
     - name: Full Name
       value: Joel José Ginga
-    - name: Contact
+    - name: Label
+      value: Software Developer & Configuration Manager
+    - name: Email
       value: jjginga@gmail.com
-    - name: Languages
-      value: Portuguese (Native), English (C), Spanish(B), German(A)
+    - name: Phone
+      value: +351914797701
+    - name: Summary
+      value: As a software developer with a proven track record of resilience and determination, I thrive on tackling complex challenges and delivering innovative solutions. My approach to software development is akin to running a marathon, requiring persistence, strategic planning, and a focus on long-term goals. This mindset has equipped me with the ability to not only meet but exceed expectations in fast-paced and dynamic environments. My journey in the tech industry is also includes an active engagement in the analysis and requirement gathering process, working closely with stakeholders to understand their needs and translating them into actionable development tasks.
+    - name: Location
+      value: Lisbon, PT
+    - name: Profiles
+      value: Linkedin (https://www.linkedin.com/in/jjginga/), codesignal (https://app.codesignal.com/profile/jjginga), codewars (https://www.codewars.com/users/jjginga), leetcode (https://leetcode.com/jjginga/)
+
+- title: Professional Experience
+  type: time_table
+  contents:
+    - title: Software Developer & Configuration Manager
+      institution: BNP Paribas Security Services
+      year: 2021-06-01 - Present
+      description:
+        - Developing new features and improvements for existing applications, actively engaging in analysis and requirement gathering, and managing developer repositories and deployment strategies.
+        - Keywords: Java, SQL, Linux, Jenkins, JIRA, Confluence, git, gitlab
+    - title: Software Developer
+      institution: CTT - Portuguese Post Office
+      year: 2020-08-01 - 2021-06-01
+      description:
+        - Developed new features, conducted bug fixing, and performed maintenance improvements in existing applications.
+        - Keywords: Java, SQL, JavaScript, SOAP, Spring, git, SVN
+    - title: Chemical Engineer
+      institution: Euro-Yser - Chemical Products
+      year: 2009-03-01 - 2019-12-01
+      description:
+        - Progressed through various roles, contributing to process engineering, quality assurance, and production team leadership.
 
 - title: Education
   type: time_table
   contents:
     - title: Bachelor in Software Engineering
       institution: Universidade Aberta
-      year: Jan 2021 - Present
-    - title: Chemical Engineering
+      year: 2021-09-01 - Present
+      description:
+        - Specialized in Information Systems and Technologies, focusing on solving technical, economic, and social criteria problems.
+    - title: Master in Chemical Engineering
       institution: Universidade de Aveiro
-      year: Oct 1999 - Oct 2007
+      year: 1999-10-01 - 2007-10-01
+      description:
+        - Trained in designing, optimizing, and managing industrial processes involving chemical or physical changes.
 
-- title: Skills - Professional Knowledge
+- title: Skills
+  type: nested_list
+  contents:
+    - title: Programming Languages
+      items:
+        - Experienced: Java, SQL, JavaScript, Struts
+        - Academic: C/C++, python, Spring
+    - title: Tools & Technologies
+      items:
+        - Experienced: Linux, Jenkins, JIRA, Confluence, Git
+
+- title: Languages
   type: list
   contents:
-    - Java, SQL, git, Agile, Linux, Jenkins, JIRA, Confluence, Git, JavaScript, Strurs
-
-- title: Skills - Academic Knowledge
-  type: list
-  contents:
-    - C/C++, python, Javascript
-
-
-- title: Professional Interests
-  type: list
-  contents:
-    - Problem-solving, Inovative Solutions, Scrum/Agile
+    - Portuguese (Native speaker)
+    - English (Fluent)
+    - Spanish (Intermediate)
+    - German (Beginner)
 
 - title: Personal Interests
   type: list
   contents:
-    - Running, Trail Running, Reading, Cooking, Traveling
+    - Running, Reading, Politics, Equality, Society, Poetry, Construction of Race, History
