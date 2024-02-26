@@ -7,8 +7,8 @@
       value: Software Developer & Configuration Manager
     - name: Email
       value: jjginga@gmail.com
-    - name: Phone
-      value: +351914797701
+    #- name: Phone
+    #  value: +351914797701
     - name: Summary
       value: As a software developer with a proven track record of resilience and determination, I thrive on tackling complex challenges and delivering innovative solutions. My approach to software development is akin to running a marathon, requiring persistence, strategic planning, and a focus on long-term goals. This mindset has equipped me with the ability to not only meet but exceed expectations in fast-paced and dynamic environments. My journey in the tech industry is also includes an active engagement in the analysis and requirement gathering process, working closely with stakeholders to understand their needs and translating them into actionable development tasks.
     - name: Location
