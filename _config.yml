@@ -204,10 +204,10 @@ kramdown:
 
 # Includes & excludes
 include: 
-  - about.md
-  - blog.md
-  - repositories.md
-  - cv.md
+  - about
+  - blog
+  - repositories
+  - cv
 exclude:
   - bin
   - CONTRIBUTING.md
