@@ -1,66 +1,102 @@
-- title: General Information
+- title: Basics
   type: map
   contents:
-    - name: Full Name
+    - name: Name
       value: Joel José Ginga
     - name: Label
-      value: Software Developer & Configuration Manager
+      value: Software Developer
     - name: Email
       value: jjginga@gmail.com
     #- name: Phone
     #  value: +351914797701
+    -name: URL
+      value: https://jjginga.github.io
     - name: Summary
-      value: As a software developer with a proven track record of resilience and determination, I thrive on tackling complex challenges and delivering innovative solutions. My approach to software development is akin to running a marathon, requiring persistence, strategic planning, and a focus on long-term goals. This mindset has equipped me with the ability to not only meet but exceed expectations in fast-paced and dynamic environments. My journey in the tech industry is also includes an active engagement in the analysis and requirement gathering process, working closely with stakeholders to understand their needs and translating them into actionable development tasks.
+      value: My approach to software development is akin to running a marathon, requiring persistence, strategic planning, and a focus on long-term goals. This mindset has equipped me with the ability to not only meet but exceed expectations in fast-paced and dynamic environments. My journey in the tech industry is also includes an active engagement in the analysis and requirement gathering process, working closely with stakeholders to understand their needs and translating them into actionable development tasks.
     - name: Location
       value: Lisbon, PT
-    - name: Profiles
-      value: Linkedin (https://www.linkedin.com/in/jjginga/), codesignal (https://app.codesignal.com/profile/jjginga), codewars (https://www.codewars.com/users/jjginga), leetcode (https://leetcode.com/jjginga/)
+      
+- title: Profiles
+  type: map
+  contents:
+    - name: Linkedin
+      value: https://www.linkedin.com/in/jjginga/
+    - name: codesignal 
+      value: https://app.codesignal.com/profile/jjginga
+    - name: codewars 
+      value: https://www.codewars.com/users/jjginga
+    - name: leetcode 
+      value: https://leetcode.com/jjginga/
 
 - title: Professional Experience
   type: time_table
   contents:
-    - title: Software Developer & Configuration Manager
+    - title: Software Developer
       institution: BNP Paribas Security Services
-      year: 2021-06-01 - Present
+      year: 2021-06 - Present
       description:
-        - Developing new features and improvements for existing applications, actively engaging in analysis and requirement gathering, and managing developer repositories and deployment strategies.
-        - Keywords: Java, SQL, Linux, Jenkins, JIRA, Confluence, git, gitlab
+        - Develop new features and improvements for an existing application, in a team of twenty people, with an Agile methodology, using Jira and Confluence.
+        - Active engagement in the analysis and requirement gathering process, working closely with stakeholders tounderstand their needs and translating them into actionable development tasks.
+        - Java, SQL, STRUTS, Linux, Jenkins, JIRA, Confluence
+    - title: Configuration Manager
+      institution: BNP Paribas Security Services
+      year: 2022-06 - Present
+      description:
+        - DGit strategy implementation, enhancing code integration and quality. Repositories Managemen, coordinate software package preparation and deployment. Cross-team collaboration by bridging development and IT insfrastructure teams and continuous improvement.
+        - git, gitlab, Jenkins, Linux
     - title: Software Developer
       institution: CTT - Portuguese Post Office
-      year: 2020-08-01 - 2021-06-01
+      year: 2020-08 - 2021-06
       description:
-        - Developed new features, conducted bug fixing, and performed maintenance improvements in existing applications.
-        - Keywords: Java, SQL, JavaScript, SOAP, Spring, git, SVN
+        - Software development and maintenance, in a team of ten people, with a waterfall methodology.
+        - Java, SQL, JavaScript, SOAP, Spring, git, SVN
     - title: Chemical Engineer
       institution: Euro-Yser - Chemical Products
-      year: 2009-03-01 - 2019-12-01
+      year: 2009-03 - 2019-12
       description:
         - Progressed through various roles, contributing to process engineering, quality assurance, and production team leadership.
+        - Production Team Lead - 2018 - Drove team performance to meet and surpass production goals through splanning and effective resource allocation. Cultivated a supportive environment that enabled all team members to excel and thrive.
+        - Quality Assurance Manager - 2013 - Elevated quality standards, leading initiatives that fostered a deep sense of pride and ownership among team members. Developed and enforced rigorous quality protocols that consistently exceeded company expectations.
+        - Process Engineer - 2010 -  Mastered operational control, significantly enhancing process efficiency and reliability. Implemented innovative solutions to streamline workflows and minimize waste.
+        - Trainee - 2009
 
 - title: Education
   type: time_table
   contents:
     - title: Bachelor in Software Engineering
       institution: Universidade Aberta
-      year: 2021-09-01 - Present
+      year: 2021-09 - Present
       description:
         - Specialized in Information Systems and Technologies, focusing on solving technical, economic, and social criteria problems.
     - title: Master in Chemical Engineering
       institution: Universidade de Aveiro
-      year: 1999-10-01 - 2007-10-01
+      year: 1999-10 - 2007-10
       description:
         - Trained in designing, optimizing, and managing industrial processes involving chemical or physical changes.
 
-- title: Skills
-  type: nested_list
+- title: Programming Languages | Professional Knowledge
+  type: list
   contents:
-    - title: Programming Languages
-      items:
-        - Experienced: Java, SQL, JavaScript, Struts
-        - Academic: C/C++, python, Spring
-    - title: Tools & Technologies
-      items:
-        - Experienced: Linux, Jenkins, JIRA, Confluence, Git
+    - Java
+    - SQL
+    - Shell Script
+
+- title: Other Tools and Technologies | Professional Knowledge
+  type: list
+  contents:
+    - git
+    - STRUTS
+    - Linux
+    - Agile
+    - JIRA & Confluence
+
+- title: Programming Languages | Academic Knowledge
+  type: list
+  contents:
+    - C/C++
+    - Python
+    - Javascript
+
 
 - title: Languages
   type: list
@@ -73,4 +109,4 @@
 - title: Personal Interests
   type: list
   contents:
-    - Running, Reading, Politics, Equality, Society, Poetry, Construction of Race, History
+    - Running, Reading, Politics, Equality, Society, Poetry, History
