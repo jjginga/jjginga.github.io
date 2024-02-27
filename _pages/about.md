@@ -6,7 +6,7 @@ subtitle: a marathon is a 12.2 km race with a 30 km warmup.
 
 profile:
   align: right
-  image: me_squase_small.jpg
+  image: me_square_small.jpg
   image_circular: false # crops the image to make it circular
   #more_info: >
   #  <p>555 your office number</p>
