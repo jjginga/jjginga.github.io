@@ -7,9 +7,9 @@
       value: Software Developer
     - name: Email
       value: jjginga@gmail.com
-    #- name: Phone
+    # - name: Phone
     #  value: +351914797701
-    -name: URL
+    - name: URL
       value: https://jjginga.github.io
     - name: Summary
       value: My approach to software development is akin to running a marathon, requiring persistence, strategic planning, and a focus on long-term goals. This mindset has equipped me with the ability to not only meet but exceed expectations in fast-paced and dynamic environments. My journey in the tech industry is also includes an active engagement in the analysis and requirement gathering process, working closely with stakeholders to understand their needs and translating them into actionable development tasks.
@@ -42,7 +42,7 @@
       institution: BNP Paribas Security Services
       year: 2022-06 - Present
       description:
-        - DGit strategy implementation, enhancing code integration and quality. Repositories Managemen, coordinate software package preparation and deployment. Cross-team collaboration by bridging development and IT insfrastructure teams and continuous improvement.
+        - Git strategy implementation, enhancing code integration and quality. Repositories Managemen, coordinate software package preparation and deployment. Cross-team collaboration by bridging development and IT infrastructure teams and continuous improvement.
         - git, gitlab, Jenkins, Linux
     - title: Software Developer
       institution: CTT - Portuguese Post Office
