@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: jjginga.com/sitemap.xml
+Sitemap: jjginga.github.io/sitemap.xml
