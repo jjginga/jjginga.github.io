@@ -27,11 +27,10 @@ a.btncv {
   white-space: nowrap;
 }
 
-a.btncv:hover, a.btncv:focus {
+a.btncv:hover {
   color: var(--global-theme-color) !important;
   border-color: var(--global-theme-color) !important;
   text-decoration: none !important;
-  outline: none;
 }
 
 /*****************************
@@ -190,3 +189,27 @@ ul.timeline li::before {
   left: 2px;
   top: -0.5rem;
 }
+
+/*ul.timeline::before {
+     content: "●";
+     font-size: 1em;
+     display: inline-block;
+     margin: 0;
+     padding: 0;
+     position: relative;
+     left: -2px;
+     top: 0.4rem;
+     color: var(--global-text-color);
+}
+ ul.timeline::after {
+     content: "●";
+     font-size: 1em;
+     display: inline-block;
+     margin: 0;
+     padding: 0;
+     position: relative;
+     left: -2px;
+     top: -1rem;
+     color: var(--global-text-color);
+}
+*/
