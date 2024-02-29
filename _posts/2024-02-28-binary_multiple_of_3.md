@@ -96,21 +96,21 @@ We could directly write a regular expression from this DFA, bur we can do better
 $$
 
 Given the DFA ( M = (Q, \Sigma, \delta, q_0, F) ), where:
-\begin{itemize}
-  \item ( Q = \{q_0, q_1, q_2\} )
-  \item ( \Sigma = \{0, 1\} )
-  \item ( \delta ) is defined by the transitions:
-  \begin{align*}
+   ( Q = \{q_0, q_1, q_2\} )
+   ( \Sigma = \{0, 1\} )
+   ( \delta ) is defined by the transitions:
+  \[
+  \begin{aligned}
     \delta(q_0, 0) &= q_0 \\
     \delta(q_0, 1) &= q_1 \\
     \delta(q_1, 0) &= q_2 \\
     \delta(q_1, 1) &= q_0 \\
     \delta(q_2, 0) &= q_1 \\
     \delta(q_2, 1) &= q_2
-  \end{align*}
-  \item ( q_0 ) is the start state
-  \item ( F = \{q_0\} ) is the set of accept states
-\end{itemize}
+  \end{aligned}
+  \]
+  ( q_0 ) is the start state
+  ( F = \{q_0\} ) is the set of accept states
 
 $$
 
