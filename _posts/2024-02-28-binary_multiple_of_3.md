@@ -96,8 +96,8 @@ We could directly write a regular expression from this DFA, bur we can do better
 $$
 
 Given the DFA ( M = (Q, \Sigma, \delta, q_0, F) ), where:
-   ( Q = \{q_0, q_1, q_2\} )
-   ( \Sigma = \{0, 1\} )
+   ( Q = { q_0, q_1, q_2 } )
+   ( \Sigma =  { 0, 1 } )
    ( \delta ) is defined by the transitions:
   \[
   \begin{aligned}
@@ -110,7 +110,7 @@ Given the DFA ( M = (Q, \Sigma, \delta, q_0, F) ), where:
   \end{aligned}
   \]
   ( q_0 ) is the start state
-  ( F = \{q_0\} ) is the set of accept states
+  ( F = { q_0 } ) is the set of accept states
 
 $$
 
