@@ -93,13 +93,14 @@ With the available info it is easy to design the following DFA
 
 We could directly write a regular expression from this DFA, bur we can do better than that. We start by defining it mathematically 
 
-$$
 
-Given the DFA ( M = (Q, \Sigma, \delta, q_0, F) ), where:
+
+Given the DFA $$( M = (Q, \Sigma, \delta, q_0, F) )$$, where:
+$$
    ( Q = { q_0, q_1, q_2 } )
    ( \Sigma =  { 0, 1 } )
-   ( \delta ) is defined by the transitions:
-  \[
+   ( \delta )$$ is defined by the transitions:
+$$
   \begin{aligned}
     \delta(q_0, 0) &= q_0 \\
     \delta(q_0, 1) &= q_1 \\
@@ -108,11 +109,11 @@ Given the DFA ( M = (Q, \Sigma, \delta, q_0, F) ), where:
     \delta(q_2, 0) &= q_1 \\
     \delta(q_2, 1) &= q_2
   \end{aligned}
-  \]
-  ( q_0 ) is the start state
-  ( F = { q_0 } ) is the set of accept states
-
 $$
+
+$$  ( q_0 ) $$ is the start state
+$$  ( F = { q_0 } ) $$ is the set of accept states
+
 
 Then we can start by writting the equations for all the states:
 
