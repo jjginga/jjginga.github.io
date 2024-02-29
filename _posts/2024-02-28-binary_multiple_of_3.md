@@ -3,9 +3,10 @@ layout: distill
 title: chalenge - binary multiple of 3
 description: the challenge was to create a regular expression capable of recognizing multiples of 3. 
 tags: regex dfa binary
+categories: regex
 giscus_comments: true
 date: 2024-02-28
-featured: true
+featured: false
 
 
 
@@ -96,10 +97,14 @@ We could directly write a regular expression from this DFA, bur we can do better
 
 
 Given the DFA $$( M = (Q, \Sigma, \delta, q_0, F) )$$, where:
+
 $$
    ( Q = { q_0, q_1, q_2 } )
    ( \Sigma =  { 0, 1 } )
-   ( \delta )$$ is defined by the transitions:
+   ( \delta )$$ 
+   
+   is defined by the transitions:
+
 $$
   \begin{aligned}
     \delta(q_0, 0) &= q_0 \\
@@ -112,6 +117,7 @@ $$
 $$
 
 $$  ( q_0 ) $$ is the start state
+
 $$  ( F = { q_0 } ) $$ is the set of accept states
 
 
