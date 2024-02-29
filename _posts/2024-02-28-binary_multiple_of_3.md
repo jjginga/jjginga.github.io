@@ -43,12 +43,16 @@ _styles: >
 After I run my marathon I took some days to rest by the sea. Little did I know that instead of a conventional boat I would embark on a computational odyssey where on a sea of zeros and ones. It happened when I crossed paths with [this CodeWars kata](https://www.codewars.com/kata/54de279df565808f8b00126a). It seemed simple, since I only had to create a regex expression. And it had a hight reward - 4 kata. So, I decided to take a try. After all, I just had to find a pattern amidst the cascade of 0s and 1s of the binary numbers multiple of 3.
 
 ```
-In this kata, your task is to create a regular expression capable of evaluating binary strings (strings with only 1s and 0s) and determining whether the given string represents a number divisible by 3.
+In this kata, your task is to create a regular expression capable of evaluating binary 
+strings (strings with only 1s and 0s) and determining whether the given string 
+represents a number divisible by 3.
 
 Take into account that:
 
-An empty string might be evaluated to true (it's not going to be tested, so you don't need to worry about it - unless you want)
-The input should consist only of binary digits - no spaces, other digits, alphanumeric characters, etc.
+An empty string might be evaluated to true (it's not going to be tested, so you don't 
+need to worry about it - unless you want)
+The input should consist only of binary digits - no spaces, other digits, alphanumeric
+ characters, etc.
 There might be leading 0s.
 ```
 
@@ -72,7 +76,7 @@ I started by writting a bunch of binary representations of multiples of 3, in th
 There is one, but I wasn't able to recognize it, but a qick search on the internet showed me that if I sum all the odd-positioned bits and subtract to it the sum of all of the even-position bits and get a result that is diviseble by 3, then the original binary number is also divisible by 3. 
 
 ```
-<b>27 in binary is 11011</b>
+27 in binary is 11011
 odd bits: 1+0+1 = 2
 even bitts: 1+1 = 2
 differente: 2-2 = 0, ence 27 is diviseble by 3.
@@ -90,14 +94,12 @@ With the available info it is easy to design the following DFA
 We could directly write a regular expression from this DFA, bur we can do better than that. We start by defining it mathematically 
 
 $$
-\documentclass{article}
-\usepackage{amsmath}
-\begin{document}
-Given the DFA \( M = (Q, \Sigma, \delta, q_0, F) \), where:
+
+Given the DFA ( M = (Q, \Sigma, \delta, q_0, F) ), where:
 \begin{itemize}
-  \item \( Q = \{q_0, q_1, q_2\} \)
-  \item \( \Sigma = \{0, 1\} \)
-  \item \( \delta \) is defined by the transitions:
+  \item ( Q = \{q_0, q_1, q_2\} )
+  \item ( \Sigma = \{0, 1\} )
+  \item ( \delta ) is defined by the transitions:
   \begin{align*}
     \delta(q_0, 0) &= q_0 \\
     \delta(q_0, 1) &= q_1 \\
@@ -106,37 +108,37 @@ Given the DFA \( M = (Q, \Sigma, \delta, q_0, F) \), where:
     \delta(q_2, 0) &= q_1 \\
     \delta(q_2, 1) &= q_2
   \end{align*}
-  \item \( q_0 \) is the start state
-  \item \( F = \{q_0\} \) is the set of accept states
+  \item ( q_0 ) is the start state
+  \item ( F = \{q_0\} ) is the set of accept states
 \end{itemize}
-\end{document}
+
 $$
 
 Then we can start by writting the equations for all the states:
 
 $$
-q_0 = \epson + q_0 0 + q_1 1
+q_0 = \epsilon + q_0 0 + q_1 1
 q_1 = q_0 1 + q_2 0
 q_2 = q_1 0 + q_2 1
 $$
 
-To simplify $$ q_2 $$ and $$ q_1 $$ we can use [Arden's theorem](https://www.geeksforgeeks.org/ardens-theorem-in-theory-of-computation/). We first note that the theorem states that if a regular expression $$ R $$ satisfies the equation $$ R = Q + RP $$, where $$ Q $$ and $$ P $$ are regular expressions and $$ P $$ does not contain the empty string $$ \epson $$ then $$ R = QP* $$ is a solution for the equation.
+To simplify $$ q_2 $$ and $$ q_1 $$ we can use [Arden's theorem](https://www.geeksforgeeks.org/ardens-theorem-in-theory-of-computation/). We first note that the theorem states that if a regular expression $$ R $$ satisfies the equation $$ R = Q + RP $$, where $$ Q $$ and $$ P $$ are regular expressions and $$ P $$ does not contain the empty string $$ \epsilon $$ then $$ R = QP* $$ is a solution for the equation.
 
-Aplying it to $$ q_2 $$ we get $$ q_2 = \( q_1 0 \) \( 1 * \)  $$ - this represents the language accepted by $$ q_1 $$ followed by a 0 and then any number of 1s.
+Aplying it to $$ q_2 $$ we get $$ q_2 = ( q_1 0 ) ( 1 * )  $$ - this represents the language accepted by $$ q_1 $$ followed by a 0 and then any number of 1s.
 
-Now substituting this on the equation for $$ q_1 $$ we get $$ q_1 = q_0 1 + \( q_1 0 \) (\ 1 * \)  0 $$.
+Now substituting this on the equation for $$ q_1 $$ we get $$ q_1 = q_0 1 + ( q_1 0 ) (\ 1 * )  0 $$.
 
-We can now apply Arden's Theorem again: $$ q_1 =  \( q_0 1 \) \( 0 \( 1 * \)  0 \) * $$ - and you get the language accepted by $$ q_0 $$ followed by a 1 and then any number of repetitions starting with 0, followed by zero or more 1s and ending with 0.
+We can now apply Arden's Theorem again: $$ q_1 =  ( q_0 1 ) ( 0 ( 1 * )  0 ) * $$ - and you get the language accepted by $$ q_0 $$ followed by a 1 and then any number of repetitions starting with 0, followed by zero or more 1s and ending with 0.
 
-Now we can write $$ q_0 = \epson + q_0 0 + q_0 1 \( 0 \( 1 * \)  0 \) * 1 = \epson + q_0 \( 0 + 1 \( 0 \( 1 * \)  0 \) * 1 \) $$.
+Now we can write $$ q_0 = \epsilon + q_0 0 + q_0 1 ( 0 ( 1 * )  0 ) * 1 = \epsilon + q_0 ( 0 + 1 ( 0 ( 1 * )  0 ) * 1 ) $$.
 
 Applying Arden's Theorem again we get:
 
-$$ q_0 = \( \epson \) \( 0 + 1 \( 0 \( 1 * \)  0 \) * 1 \) * $$ 
+$$ q_0 = ( \epsilon ) ( 0 + 1 ( 0 ( 1 * )  0 ) * 1 ) * $$ 
 
 That can be further simplified to
 
-$$ q_0 = \( \epson \) \( 0 + 1 \( 0 \( 1 * \)  0 \) * 1 \) * $$ 
+$$ q_0 = ( \epsilon ) ( 0 + 1 ( 0 ( 1 * )  0 ) * 1 ) * $$ 
 
 This is the final expression for $$ q_0 $$ that describe all the strings accepted by the automata that start and end in this state. 
 
