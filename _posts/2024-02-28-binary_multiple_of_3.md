@@ -1,9 +1,9 @@
 ---
 layout: distill
-title: chalenge - binary multiple of 3
+title: challenge - binary multiple of 3
 description: the challenge was to create a regular expression capable of recognizing multiples of 3. 
-tags: regex dfa binary
-categories: regex
+tags: regex dfa binary codewars
+categories: regex codewars
 giscus_comments: true
 date: 2024-02-28
 featured: false
@@ -17,7 +17,7 @@ toc:
     #   - name: Example Child Subsection 1
     #   - name: Example Child Subsection 2
   - name: Journey
-  - name: Solution & Reflextion
+  - name: Solution and reflection
   - name: Further information
   
 # Below is an example of injecting additional post-specific styles.
@@ -57,7 +57,7 @@ The input should consist only of binary digits - no spaces, other digits, alphan
 There might be leading 0s.
 ```
 
-## Jorney
+## Journey
 
 I started by writting a bunch of binary representations of multiples of 3, in the hope of finding a pattern visually.
 
@@ -74,16 +74,16 @@ I started by writting a bunch of binary representations of multiples of 3, in th
 | 27            |   11011       |
 | 30            |   11110       |
 
-There is one, but I wasn't able to recognize it, but a qick search on the internet showed me that if I sum all the odd-positioned bits and subtract to it the sum of all of the even-position bits and get a result that is diviseble by 3, then the original binary number is also divisible by 3. 
+There is one, but I wasn't able to recognize it, but a quick search on the internet showed me that if I sum all the odd-positioned bits and subtract to it the sum of all of the even-position bits and get a result that is divisible by 3, then the original binary number is also divisible by 3. 
 
 ```
 27 in binary is 11011
 odd bits: 1+0+1 = 2
 even bitts: 1+1 = 2
-differente: 2-2 = 0, ence 27 is diviseble by 3.
+different: 2-2 = 0, hence 27 is divisible by 3.
 ```
 
-Converting this logic to a regular expression is not straightforward, they work well for patern matching and not for mathematical operations. So, it hit me. I could use an Automata.
+Converting this logic to a regular expression is not straightforward, they work well for pattern matching and not for mathematical operations. So, it hit me. I could use an Automata.
 The Automata would have states representing the remainder when divided by 3 (the possible remainders are 0, 1 and 2), and transactions based on the next binary digit. And we could then determine the divisibility by 3 by observing the state after processing all the bits.
 
 With the available info it is easy to design the following DFA
@@ -131,7 +131,7 @@ $$
 
 To simplify $$ q_2 $$ and $$ q_1 $$ we can use [Arden's theorem](https://www.geeksforgeeks.org/ardens-theorem-in-theory-of-computation/). We first note that the theorem states that if a regular expression $$ R $$ satisfies the equation $$ R = Q + RP $$, where $$ Q $$ and $$ P $$ are regular expressions and $$ P $$ does not contain the empty string $$ \epsilon $$ then $$ R = QP* $$ is a solution for the equation.
 
-Aplying it to $$ q_2 $$ we get $$ q_2 = ( q_1 0 ) ( 1 * )  $$ - this represents the language accepted by $$ q_1 $$ followed by a 0 and then any number of 1s.
+Applying it to $$ q_2 $$ we get $$ q_2 = ( q_1 0 ) ( 1 * )  $$ - this represents the language accepted by $$ q_1 $$ followed by a 0 and then any number of 1s.
 
 Now substituting this on the equation for $$ q_1 $$ we get $$ q_1 = q_0 1 + ( q_1 0 ) (\ 1 * )  0 $$.
 
@@ -150,7 +150,7 @@ $$ q_0 = ( \epsilon ) ( 0 + 1 ( 0 ( 1 * )  0 ) * 1 ) * $$
 This is the final expression for $$ q_0 $$ that describe all the strings accepted by the automata that start and end in this state. 
 
 
-## Solution and reflexion
+## Solution and reflection
 
 {% highlight c++ %}
 const std::string multiple_of_3_regex = "^(0|1(01*0)*1)*$";
