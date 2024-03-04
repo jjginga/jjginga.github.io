@@ -6,13 +6,13 @@
     - name: Label
       value: Software Developer
     - name: Email
-      value: jjginga@gmail.com
+      value: joel@jjginga.com
     # - name: Phone
     #  value: +351914797701
     - name: URL
-      value: https://jjginga.github.io
+      value: https://jjginga.com
     - name: Summary
-      value: My approach to software development is akin to running a marathon, requiring persistence, strategic planning, and a focus on long-term goals. This mindset has equipped me with the ability to not only meet but exceed expectations in fast-paced and dynamic environments. My journey in the tech industry is also includes an active engagement in the analysis and requirement gathering process, working closely with stakeholders to understand their needs and translating them into actionable development tasks.
+      value: I'm a resilient software developer, excelling in solving challenges anddelivering innovative solutions. My approach mirrors a marathon,emphasizing persistence, strategic planning, and long-term goals. Iexceed expectations in fast-paced environments, with a commitmentto learning and exploring new technologies. My adaptability andwillingness to relocate make me a versatile asset to any teamMy approach to software development is akin to running a marathon, requiring persistence, strategic planning, and a focus on long-term goals. This mindset has equipped me with the ability to not only meet but exceed expectations in fast-paced and dynamic environments. My journey in the tech industry is also includes an active engagement in the analysis and requirement gathering process, working closely with stakeholders to understand their needs and translating them into actionable development tasks.
     - name: Location
       value: Lisbon, PT
       
@@ -55,20 +55,20 @@
       year: 2009-03 - 2019-12
       description:
         - Progressed through various roles, contributing to process engineering, quality assurance, and production team leadership.
-        - Production Team Lead - 2018 - Drove team performance to meet and surpass production goals through splanning and effective resource allocation. Cultivated a supportive environment that enabled all team members to excel and thrive.
-        - Quality Assurance Manager - 2013 - Elevated quality standards, leading initiatives that fostered a deep sense of pride and ownership among team members. Developed and enforced rigorous quality protocols that consistently exceeded company expectations.
-        - Process Engineer - 2010 -  Mastered operational control, significantly enhancing process efficiency and reliability. Implemented innovative solutions to streamline workflows and minimize waste.
+        - Production Team Lead - 2018 - Led team to exceed production targets through strategic planning and resource allocation, fostering an environment where all members excel and thrive.
+        - Quality Assurance Manager - 2013 - Elevated quality standards, leading initiatives that fostered a deep sense of pride and ownership among team members. Developed and enforced rigorous quality protocols that consistently exceeded company expectations.Elevated quality standards, fostering pride and ownership among team members. Developed and enforced rigorous quality protocols that exceeded company expectations.
+        - Process Engineer - 2010 -  Mastered operational control, significantly enhancing process efficiency and reliability. Implemented innovative solutions to streamline workflows and minimize waste.Mastered operational control, enhancing efficiency and reliability. Implemented innovative solutions to streamline workflows.
         - Trainee - 2009
 
 - title: Education
   type: time_table
   contents:
     - title: Bachelor in Software Engineering
-      institution: Universidade Aberta
+      institution: Universidade Aberta (180 ECTS)
       year: 2021-09 - Present
       description:
         - Specialized in Information Systems and Technologies, focusing on solving technical, economic, and social criteria problems.
-    - title: Master in Chemical Engineering
+    - title: Bachelor in Chemical Engineering (300 ECTS)
       institution: Universidade de Aveiro
       year: 1999-10 - 2007-10
       description:
