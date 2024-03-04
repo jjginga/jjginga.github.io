@@ -77,7 +77,8 @@ In summary, consistency and integrity in databases are like following a recipe a
 # Definition
 
 [GeeksForGeeks](https://www.geeksforgeeks.org/transaction-in-dbms/) defines a transaction as
-<d-cite key="gregor2015draw">a set of logically related operations. It is the result of a request made by the user to access the contents of the database and perform operations on it. It consists of various operations and has various states in its completion journey. It also has some specific properties that must be followed to keep the database consistent.</d-cite>
+```a set of logically related operations. It is the result of a request made by the user to access the contents of the database and perform operations on it. It consists of various operations and has various states in its completion journey. It also has some specific properties that must be followed to keep the database consistent.
+```
 
 # ACID 
 
