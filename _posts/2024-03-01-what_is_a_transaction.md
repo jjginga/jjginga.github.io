@@ -120,7 +120,7 @@ Just as following a recipe step by step leads to delicious cookies, adhering to 
 
 ## Further information
 
-[Geeks for Geeks](https://www.geeksforgeeks.org/ardens-theorem-in-theory-of-computation/https://www.geeksforgeeks.org/transaction-in-dbms/)
+[Geeks for Geeks](https://www.geeksforgeeks.org/transaction-in-dbms/)
 
 [Tutorialspoint](https://www.tutorialspoint.com/dbms/dbms_transaction.htm)
 
