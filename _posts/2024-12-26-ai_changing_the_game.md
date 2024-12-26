@@ -1,6 +1,6 @@
 ---
 layout: distill
-title: The Future of Development: AI is Changing the Game, Not Eliminating the Players
+title: the future of development - ai
 description: A reflection on how AI tools like OpenAI's O3 are reshaping the role of developers, amplifying their capabilities rather than replacing them.
 tags: AI, software development, OpenAI, productivity, innovation
 giscus_comments: true
