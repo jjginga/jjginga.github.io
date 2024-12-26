@@ -31,16 +31,27 @@
 - title: Professional Experience
   type: time_table
   contents:
+    - title: Senior Functional Analyst
+      institution: The Navigator Company
+      year: 2024-08 - Present
+      description:
+        - Lead the development of projects from conception to implementation, ensuring precision at each stage to meet business needs.
+        - Perform requirements gathering and analysis, translating stakeholder expectations into feasible technical solutions.
+        - Responsible for process modeling, functional documentation, and mediation between business areas and the technical team.
+        - Proactively implement process optimizations through automation, alongside providing system maintenance and support.
+        - Manage functional testing and homologation, ensuring the quality of deliverables, and develop training materials for users.
+        - Oversee multiple simultaneous projects, adjusting timelines and priorities to achieve impactful results.
+        - GitLab, Linux Server, SQL, Data Modeling, Requirements Gathering, Informix 4GL, Analytical Skills, Databases, Function Analysis.
     - title: Software Developer
       institution: BNP Paribas Security Services
-      year: 2021-06 - Present
+      year: 2021-06 - 2024-07 
       description:
         - Develop new features and improvements for an existing application, in a team of twenty people, with an Agile methodology, using Jira and Confluence.
         - Active engagement in the analysis and requirement gathering process, working closely with stakeholders tounderstand their needs and translating them into actionable development tasks.
         - Java, SQL, STRUTS, Linux, Jenkins, JIRA, Confluence
     - title: Configuration Manager
       institution: BNP Paribas Security Services
-      year: 2022-06 - Present
+      year: 2022-06 - 2024-07
       description:
         - Git strategy implementation, enhancing code integration and quality. Repositories Managemen, coordinate software package preparation and deployment. Cross-team collaboration by bridging development and IT infrastructure teams and continuous improvement.
         - git, gitlab, Jenkins, Linux
