@@ -1,11 +1,11 @@
 ---
 layout: distill
 title: the future of development - ai
-description: A reflection on how AI tools like OpenAI's O3 are reshaping the role of developers, amplifying their capabilities rather than replacing them.
-tags: AI, software development, OpenAI, productivity, innovation
+description: a reflection on how ai tools like OpenAI's o3 are reshaping the role of developers, amplifying their capabilities rather than replacing them.
+tags: AI, software development, OpenAI, productivity, innovation, o3, software engineering, developer, development
 giscus_comments: true
 date: 2024-12-26
-featured: true
+featured: false
 ---
 
 <div class="row mt-3">
@@ -16,11 +16,11 @@ featured: true
 
 ## Introduction
 
-The rise of advanced AI, particularly models like OpenAI?s O3, is reshaping the software development landscape. OpenAI's O3 model, announced on December 20, 2024, is designed to enhance reasoning capabilities, enabling it to tackle complex tasks in coding, mathematics, and science. Reportedly, it can perform 72% of tasks a software engineer faces daily, including writing efficient code snippets, debugging, and optimizing algorithms. Early case studies have demonstrated that developers using O3 have seen productivity boosts of up to 40%, especially in repetitive or time-intensive tasks.
+The rise of advanced AI, particularly models like OpenAI?s O3, is reshaping the software development landscape. OpenAI's O3 model, announced on December 20, 2024, is designed to enhance reasoning capabilities, enabling it to tackle complex tasks in coding, mathematics, and science. Reportedly, it can perform 72% of tasks a software engineer faces daily, including writing efficient code snippets, debugging, and optimizing algorithms. Early case studies have demonstrated that developers using O3 have seen productivity boosts of up to 40%, especially in repetitive or time-intensive tasks[1].
 
-However, such groundbreaking advancements come at a cost. Tools like OpenAI?s O3, while incredibly powerful, are currently resource-intensive and expensive to operate?**costing as much as $1,000 per task**. This limits their accessibility to large organizations or well-funded teams for now. Yet, as with most technologies, history has shown that costs tend to decrease over time as adoption scales and efficiencies improve. A prime example is cloud storage: over the past decade, costs have dropped by more than 80%, making it widely accessible. It?s reasonable to expect AI tools like O3 to follow a similar trajectory, eventually democratizing access and enabling businesses of all sizes to leverage their potential.
+However, such groundbreaking advancements come at a cost. Tools like OpenAI?s O3, while incredibly powerful, are currently resource-intensive and expensive to operate - **costing as much as $1,000 per task**[2]. This limits their accessibility to large organizations or well-funded teams for now. 
 
----
+Yet, as with most technologies, history has shown that costs tend to decrease over time as adoption scales and efficiencies improve. A prime example is cloud storage: over the past decade, costs have dropped by more than 80%, making it widely accessible[3]. It?s reasonable to expect AI tools like O3 to follow a similar trajectory, eventually democratizing access and enabling businesses of all sizes to leverage their potential.
 
 ## Adapting to AI
 
@@ -28,15 +28,11 @@ AI is becoming a powerful ally for developers. When used as a tool, models like 
 
 **Developers remain critical for understanding processes, optimization, and requirements?the strategic elements that ensure solutions meet business and user needs**. AI might handle the heavy lifting of generating code, but developers act as directors, testers, and validators, ensuring the AI?s output aligns with the goals of the project.
 
----
-
 ## Transforming Roles
 
 **This shift doesn?t eliminate the role of developers?it reconfigures it.** The future developer will not just write code but will leverage AI to accelerate workflows, reduce repetitive tasks, and focus on higher-order problem-solving. The goal is not merely to perform tasks that AI can handle but to achieve outcomes that would be impossible without it.
 
 Much like the role of online tools in education, AI offers immense opportunities to enhance productivity but carries the risk of becoming a crutch. Developers must avoid letting AI do all the work and instead focus on becoming individuals capable of using AI to push the boundaries of innovation. The question is not what AI can do for you, but how you can leverage it to achieve what was once impossible.
-
----
 
 ## The Path Forward
 
@@ -46,8 +42,6 @@ To thrive, developers will need to:
 - **Optimize Solutions**: Fine-tuning AI outputs for performance, scalability, and alignment with the bigger picture.
 
 The key is to use AI as an amplifier of human potential. Those who use it effectively will multiply their impact and unlock new possibilities, while those who rely on it passively may find themselves left behind.
-
----
 
 ## A Symbiotic Relationship
 
