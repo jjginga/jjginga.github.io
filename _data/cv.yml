@@ -34,17 +34,18 @@
   contents:
     - title: Senior Functional Analyst
       institution: The Navigator Company
-      year: 2024-07 - Present
+      year: 2024-08 - Present
       description:
-        - Lead end‑to‑end project development for a distributed industrial and commercial system managing the entire supply chain—from order placement and planning to production, shipment, and delivery.
-        - Conduct detailed requirements gathering and analysis, translating stakeholder expectations into feasible technical solutions.
-        - Proactively implement process optimizations through automation while providing ongoing system maintenance and support.
-        - Develop and deliver training materials for end‑users to improve system adoption and efficiency.
-        - Oversee multiple concurrent projects, adjusting timelines and priorities to achieve strategic business objectives.
-        - Technologies/Skills: GitLab, Linux, SQL, Data Modeling, Requirements Gathering, Informix 4GL, Analytical Skills, Database Management, Functional Analysis.
-    - title: Java Developer
+        - Lead the development of projects from conception to implementation, ensuring precision at each stage to meet business needs.
+        - Perform requirements gathering and analysis, translating stakeholder expectations into feasible technical solutions.
+        - Responsible for process modeling, functional documentation, and mediation between business areas and the technical team.
+        - Proactively implement process optimizations through automation, alongside providing system maintenance and support.
+        - Manage functional testing and homologation, ensuring the quality of deliverables, and develop training materials for users.
+        - Oversee multiple simultaneous projects, adjusting timelines and priorities to achieve impactful results.
+        - GitLab, Linux Server, SQL, Data Modeling, Requirements Gathering, Informix 4GL, Analytical Skills, Databases, Function Analysis.
+    - title: Software Developer
       institution: BNP Paribas Security Services
-      year: 2021-06 - 2024-07
+      year: 2021-06 - 2024-07 
       description:
         - Developed new features and enhancements for a monolithic application that processed large volumes of data daily.
         - Applied Object‑Oriented Programming (OOP) principles to improve application structure and maintainability.
