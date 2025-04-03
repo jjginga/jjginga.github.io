@@ -1,4 +1,4 @@
-- title: Basics
+- title: Personal Information
   type: map
   contents:
     - name: Name
@@ -9,12 +9,13 @@
       value: jjginga@gmail.com
     # - name: Phone
     #  value: +351914797701
-    - name: URL
+    - name: Website
       value: https://jjginga.com
-    - name: Summary
-      value: I'm a resilient software developer, excelling in solving challenges anddelivering innovative solutions. My approach mirrors a marathon,emphasizing persistence, strategic planning, and long-term goals. Iexceed expectations in fast-paced environments, with a commitmentto learning and exploring new technologies. My adaptability andwillingness to relocate make me a versatile asset to any teamMy approach to software development is akin to running a marathon, requiring persistence, strategic planning, and a focus on long-term goals. This mindset has equipped me with the ability to not only meet but exceed expectations in fast-paced and dynamic environments. My journey in the tech industry is also includes an active engagement in the analysis and requirement gathering process, working closely with stakeholders to understand their needs and translating them into actionable development tasks.
     - name: Location
       value: Lisbon, PT
+    - name: Summary
+      value: I am a resilient software developer with a marathon mindset—persistent, strategically focused, and dedicated to delivering innovative solutions. I excel in solving complex challenges, translating stakeholder requirements into robust technical solutions, and optimizing processes through automation. Adaptable and committed to continuous learning, I thrive in fast-paced environments and bring a proven track record from both IT and industrial settings.
+    
       
 - title: Profiles
   type: map
@@ -31,25 +32,44 @@
 - title: Professional Experience
   type: time_table
   contents:
-    - title: Software Developer
-      institution: BNP Paribas Security Services
-      year: 2021-06 - Present
+    - title: Senior Functional Analyst
+      institution: The Navigator Company
+      year: 2024-07 - Present
       description:
-        - Develop new features and improvements for an existing application, in a team of twenty people, with an Agile methodology, using Jira and Confluence.
-        - Active engagement in the analysis and requirement gathering process, working closely with stakeholders tounderstand their needs and translating them into actionable development tasks.
-        - Java, SQL, STRUTS, Linux, Jenkins, JIRA, Confluence
-    - title: Configuration Manager
+        - Lead end‑to‑end project development for a distributed industrial and commercial system managing the entire supply chain—from order placement and planning to production, shipment, and delivery.
+        - Conduct detailed requirements gathering and analysis, translating stakeholder expectations into feasible technical solutions.
+        - Proactively implement process optimizations through automation while providing ongoing system maintenance and support.
+        - Develop and deliver training materials for end‑users to improve system adoption and efficiency.
+        - Oversee multiple concurrent projects, adjusting timelines and priorities to achieve strategic business objectives.
+        - Technologies/Skills: GitLab, Linux, SQL, Data Modeling, Requirements Gathering, Informix 4GL, Analytical Skills, Database Management, Functional Analysis.
+    - title: Java Developer
       institution: BNP Paribas Security Services
-      year: 2022-06 - Present
+      year: 2021-06 - 2024-07
       description:
-        - Git strategy implementation, enhancing code integration and quality. Repositories Managemen, coordinate software package preparation and deployment. Cross-team collaboration by bridging development and IT infrastructure teams and continuous improvement.
-        - git, gitlab, Jenkins, Linux
-    - title: Software Developer
+        - Developed new features and enhancements for a monolithic application that processed large volumes of data daily.
+        - Applied Object‑Oriented Programming (OOP) principles to improve application structure and maintainability.
+        - Designed and implemented database stored procedures and queries using Transact‑SQL (T-SQL) and SQL, optimizing performance.
+        - Ensured system stability by contributing to maintenance and repair efforts.
+        - Integrated DevOps practices using GitLab, Jenkins, and Confluence to improve development efficiency.
+        - Worked within a 20‑person Agile/Scrum team, actively participating in standups, sprint planning, and retrospectives.
+        - Technologies/Skills: Java, Agile/Scrum, Jira, SQL, T-SQL, OOP, GitLab, Confluence, Jenkins, Linux, Shell Scripting, Tomcat, Maven, MVC.
+    - title: Configuration Manager (Concurrent with Java Developer)
+      institution: BNP Paribas Security Services
+      year: 2022-06 - 2024-07
+      description:
+        - Reviewed and implemented a Git strategy to streamline code integration, version control, and deployment processes.
+        - Managed repository structures and coordinated software package preparation and deployment for efficient release management.
+        - Led cross‑functional collaboration among development, operations, and quality teams to ensure seamless delivery.
+        - Drove continuous improvement initiatives by adopting best practices in configuration management and automation.
+        - Technologies/Skills: Git, GitLab, Jenkins, Linux, Agile, Repository Management.
+    - title: Junior Java Developer
       institution: CTT - Portuguese Post Office
       year: 2020-08 - 2021-06
       description:
-        - Software development and maintenance, in a team of ten people, with a waterfall methodology.
-        - Java, SQL, JavaScript, SOAP, Spring, git, SVN
+        - Developed and maintained software solutions as part of a 10‑member development team following a waterfall methodology.
+        - Applied OOP principles to enhance code modularity and maintainability.
+        - Integrated SQL databases and implemented secure data handling techniques.
+        - Technologies/Skills: Java, Spring Framework, JBoss, Tomcat, OOP, SQL, MVC, Web Development, HTML, JavaScript, Git, JUnit, Apache Struts, JMesa, XML.
     - title: Chemical Engineer
       institution: Euro-Yser - Chemical Products
       year: 2009-03 - 2019-12
@@ -65,14 +85,10 @@
   contents:
     - title: Bachelor in Software Engineering
       institution: Universidade Aberta (180 ECTS)
-      year: 2021-09 - Present
-      description:
-        - Specialized in Information Systems and Technologies, focusing on solving technical, economic, and social criteria problems.
+      year: 2021-09 - 2024-07
     - title: Bachelor in Chemical Engineering (300 ECTS)
       institution: Universidade de Aveiro
       year: 1999-10 - 2007-10
-      description:
-        - Trained in designing, optimizing, and managing industrial processes involving chemical or physical changes.
 
 - title: Programming Languages | Professional Knowledge
   type: list
@@ -97,6 +113,11 @@
     - Python
     - Javascript
 
+- title: Other Tools and Technologies | Academic Knowledge
+  type: list
+  contents:
+    - Spring
+    - Docker
 
 - title: Languages
   type: list
