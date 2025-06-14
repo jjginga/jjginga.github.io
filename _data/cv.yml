@@ -83,12 +83,11 @@
     - title: <a href="https://guiadoscursos.uab.pt/cursos/licenciatura-em-engenharia-informatica/?lang=en" target="_blank">Informatics Engineering (180 ECTS)</a>
       institution: Universidade Aberta 
       year: 2021 - 2024
-      ECTS: 180
       grade: 17/20 (A)
     - title: <a href="https://www.ua.pt/" target="_blank">Chemical Engineering (300 ECTS)</a>
       institution: Universidade de Aveiro
       grade: 14/20
-      year: 1999- 2007
+      year: 1999 - 2007
 
 - title: Professional Tools and Technologies
   type: list
