@@ -7,98 +7,111 @@
       value: Software Engineer
     - name: Email
       value: jjginga@gmail.com
-    - name: Phone
-      value: +351 914 79 77 01
+    # - name: Phone
+    #  value: +351914797701
     - name: Website
-      value: <a href="https://jjginga.com" target="_blank">https://jjginga.com</a>
+      value: <a href ="https://jjginga.com" target="_blank">https://jjginga.com</a>
     - name: linkedin
       value: <a href="https://www.linkedin.com/in/jjginga/" target="_blank">https://www.linkedin.com/in/jjginga</a>
-    - name: github
-      value: <a href="https://github.com/jjginga" target="_blank">https://github.com/jjginga</a>
     - name: Location
-      value: Lisbon, Portugal
+      value: Lisbon, PT
     - name: Summary
       value: Resilient software engineer passionate about solving challenges and delivering innovative solutions. I combine persistence, strategic thinking, and long-term focus, much like running a marathon, to exceed expectations in fast-paced environments. Committed to continuous learning, adaptable to new technologies, and open to relocation, I bring versatility and value to any team.
+
+
+
 
 - title: Professional Experience
   type: time_table
   contents:
     - title: IT Specialist
-      company: The Navigator Company (Portugal, Hybrid)
+      company: The Navigator Company
       year: Jul 2024 - Present
       description:
-        - I lead IT solutions development and maintenance of a distributed system for commercial and supply-chain operations, working with cross-functional teams to improve workflows and operational efficiency.
-      technologies: Informix | 4GL | GitLab | Jira | Linux | SQL
-    - title: Software Developer / Configuration Manager
-      company: BNP Paribas Security Services
-      year: Jun 2021 - Jul 2024
+       - Lead the development of projects from conception to implementation, ensuring precision at each stage to meet business needs.
+       - Perform requirements gathering and analysis, translating stakeholder expectations into feasible technical solutions.
+       - Responsible for process modeling, functional documentation, and mediation between business areas and the technical team.
+       - Proactively implement process optimizations through automation, alongside providing system maintenance and support.
+       - Manage functional testing and homologation, ensuring the quality of deliverables, and develop training materials for users.
+       - Oversee multiple simultaneous projects, adjusting timelines and priorities to achieve impactful results.
+      technologies: Distributed Systems | Informix 4GL | SQL | GitLab | Jira | Linux | Data Modeling | Requirements Gathering | Functional Analysis
+    - title: Software Developer & Configuration Manager
+      institution: BNP Paribas Security Services
+      year: 2021 - 2024 
       description:
-        - Developed new features and enhancements for enterprise applications, managed Git strategies, and improved deployment and cross-team collaboration.
-        - Applied Object‑Oriented Programming (OOP) principles with Java and Struts to improve application structure and maintainability.
-        - Designed and implemented database stored procedures using Transact‑SQL (T-SQL) to optimize performance.
-        - Drove continuous improvement by adopting best practices in configuration management and automation.
-      technologies: Java | Sybase/T-SQL | Struts | GitLab | Jenkins | Confluence | Agile/Scrum | Jira | Maven | Tomcat
-    - title: Junior Developer
-      company: CTT - Portuguese Post Office
-      year: Aug 2020 - Jun 2022
+        - Developed new features and enhancements for a monolithic application that processed large volumes of data daily.
+        - Applied Object‑Oriented Programming (OOP) principles to improve application structure and maintainability.
+        - Designed and implemented database stored procedures and queries using Transact‑SQL (T-SQL) and SQL, optimizing performance.
+        - Ensured system stability by contributing to maintenance and repair efforts.
+        - Integrated DevOps practices using GitLab, Jenkins, and Confluence to improve development efficiency.
+        - Worked within a 20‑person Agile/Scrum team, actively participating in standups, sprint planning, and retrospectives.
+        - Reviewed and implemented a Git strategy to streamline code integration, version control, and deployment processes.
+        - Managed repository structures and coordinated software package preparation and deployment for efficient release management.
+        - Led cross‑functional collaboration among development, operations, and quality teams to ensure seamless delivery.
+        - Drove continuous improvement initiatives by adopting best practices in configuration management and automation.
+        - title: Technologies/Skills
+          contents: 
+          - Java | t-sql | sql | linux | Shell Script
+          - Agile/Scrum | Jira | Confluence
+          - Jenkins | GitLab | Maven | Tomcat
+          - git | GitLab | Jenkins | Linux | Agile | Repository Management
+    - title: Junior Java Developer
+      institution: CTT - Portuguese Post Office
+      year: 2020 - 2021
       description:
-        - Contributed to software development and maintenance in a waterfall team, raised code quality standards, and helped exceed production targets.
-      technologies: Java | JavaScript | SQL | Spring Framework | JBoss | Tomcat | Azure DevOps | Waterfall
-    - title: Production Team Lead
-      company: Euro-Yser - Chemical Products
-      year: 2018 - 2020
-      description:
-        - Managed daily operations, ensured safety compliance, and optimized workflows for greater efficiency.
-    - title: Quality Assurance Manager
-      company: Euro-Yser - Chemical Products
-      year: 2013 - 2018
-      description:
-        - Established quality standards that improved product reliability and led a team to consistently meet production goals.
-    - title: Process Engineer
-      company: Euro-Yser - Chemical Products
-      year: 2010 - 2013
-      description:
-        - Designed and optimized production processes, improving output and reducing costs.
-
-- title: Skills
-  type: map
-  contents:
-    - name: Programming Languages
-      value: Java, JavaScript, Python, SQL, Shell Script, C/C++, Rust, Go, OCaml, Prolog
-    - name: Frameworks & Technologies
-      value: Struts, Spring, Tiles, JMesa, Sybase/T-SQL, HTML, CSS, OOP, Docker
-    - name: Tools & Platforms
-      value: Git, GitLab, Jenkins, Jira, Confluence, Linux, Agile, Scrum, Waterfall, Maven, Tomcat, JBoss
-    - name: Other Skills
-      value: Software Configuration Management, Continuous Integration, Quality Assurance, Operational Control, Cross-Team Collaboration, Data Modeling, Requirements Gathering
+        - Developed and maintained software solutions as part of a 10‑member development team following a waterfall methodology.
+        - Applied OOP principles to enhance code modularity and maintainability.
+        - Integrated SQL databases and implemented secure data handling techniques.
+        - title: Technologies/Skills
+          contents:
+          - Java | SQL | Spring Framework | JBoss | Tomcat | JUnit | Apache Struts
+          - Web Development | HTML | JavaScript
+          - git | JMesa | XML.
+    - title: Chemical Engineer
+      institution: Euro-Yser - Chemical Products
+      year: 2009 - 2019
+      contents:
+        - Progressed through various roles, contributing to process engineering, quality assurance, and production team leadership.
+        - Production Team Lead - 2018 - Led team to exceed production targets through strategic planning and resource allocation, fostering an environment where all members excel and thrive.
+        - Quality Assurance Manager - 2013 - Elevated quality standards, leading initiatives that fostered a deep sense of pride and ownership among team members. Developed and enforced rigorous quality protocols that consistently exceeded company expectations.Elevated quality standards, fostering pride and ownership among team members. Developed and enforced rigorous quality protocols that exceeded company expectations.
+        - Process Engineer - 2010 -  Mastered operational control, significantly enhancing process efficiency and reliability. Implemented innovative solutions to streamline workflows and minimize waste.Mastered operational control, enhancing efficiency and reliability. Implemented innovative solutions to streamline workflows.
+        - Trainee - 2009
 
 - title: Education
   type: time_table
   contents:
-    - title: Bachelor's in Software Engineering
-      institution: Universidade Aberta
-      ECTS: 180
+    - title: <a href="https://guiadoscursos.uab.pt/cursos/licenciatura-em-engenharia-informatica/?lang=en" target="_blank">Informatics Engineering (180 ECTS)</a>
+      institution: Universidade Aberta 
       year: 2021 - 2024
+      ECTS: 180
       grade: 17/20 (A)
-    - title: Licenciate Degree in Chemical Engineering
+    - title: <a href="https://www.ua.pt/" target="_blank">Chemical Engineering (300 ECTS)</a>
       institution: Universidade de Aveiro
-      ECTS: 300
-      year: 1999 - 2007
       grade: 14/20
-    - title: Full-Stack Programming Bootcamp (14-Week Intensive & Immersive)
-      institution: <Academia de Código_>
-      year: 2020
+      year: 1999- 2007
+
+- title: Professional Tools and Technologies
+  type: list
+  contents:
+    - Java | SQL | Shell Script
+    - git | STRUTS | Linux | Agile | JIRA | Confluence
+
+- title: Academic Tools and Technologies
+  type: list
+  contents:
+    - C/C++ | rust | Go | Python | Javascript | OCaml | Prolog
+    - Spring | Docker
 
 - title: Languages
   type: map
   contents:
-    - name: Portuguese
-      value: Native
+    - name: Portuguese 
+      value: Native speaker
     - name: English
+      value: Fluent
+    - name: Spanish 
       value: Advanced
-    - name: Spanish
-      value: Intermediate
-    - name: German
+    - name: German 
       value: Beginner
 
 - title: Personal Interests
