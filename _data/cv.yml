@@ -18,7 +18,7 @@
     - name: Location
       value: Lisbon, Portugal
     - name: Summary
-      value: I am a resilient software developer with a marathon mindset—persistent, strategically focused, and dedicated to delivering innovative solutions. I excel in solving complex challenges, translating stakeholder requirements into robust technical solutions, and optimizing processes through automation. Adaptable and committed to continuous learning, I thrive in fast-paced environments and bring a proven track record from both IT and industrial settings.
+      value: Resilient software engineer passionate about solving challenges and delivering innovative solutions. I combine persistence, strategic thinking, and long-term focus, much like running a marathon, to exceed expectations in fast-paced environments. Committed to continuous learning, adaptable to new technologies, and open to relocation, I bring versatility and value to any team.
 
 - title: Professional Experience
   type: time_table
@@ -27,57 +27,38 @@
       company: The Navigator Company (Portugal, Hybrid)
       year: Jul 2024 - Present
       description:
-        - [cite_start]I lead IT solutions development and maintenance of a distributed system for commercial and supply-chain operations, working with cross-functional teams to improve workflows and operational efficiency. [cite: 4]
-      technologies:
-        - Informix
-        - 4GL
-        - GitLab
-        - Jira
-        - Linux
-        - SQL
+        - I lead IT solutions development and maintenance of a distributed system for commercial and supply-chain operations, working with cross-functional teams to improve workflows and operational efficiency.
+      technologies: Informix | 4GL | GitLab | Jira | Linux | SQL
     - title: Software Developer / Configuration Manager
       company: BNP Paribas Security Services
       year: Jun 2021 - Jul 2024
       description:
-        - [cite_start]Developed new features and enhancements for enterprise applications, managed Git strategies, and improved deployment and cross-team collaboration. [cite: 5]
-        - Applied Object‑Oriented Programming (OOP) principles and designed and implemented database stored procedures using Transact‑SQL (T-SQL).
+        - Developed new features and enhancements for enterprise applications, managed Git strategies, and improved deployment and cross-team collaboration.
+        - Applied Object‑Oriented Programming (OOP) principles with Java and Struts to improve application structure and maintainability.
+        - Designed and implemented database stored procedures using Transact‑SQL (T-SQL) to optimize performance.
         - Drove continuous improvement by adopting best practices in configuration management and automation.
-      technologies:
-        - Java
-        - Sybase/T-SQL
-        - Struts
-        - GitLab
-        - Jenkins
-        - Confluence
-        - Agile/Scrum
-        - Jira
+      technologies: Java | Sybase/T-SQL | Struts | GitLab | Jenkins | Confluence | Agile/Scrum | Jira | Maven | Tomcat
     - title: Junior Developer
       company: CTT - Portuguese Post Office
       year: Aug 2020 - Jun 2022
       description:
-        - [cite_start]Contributed to software development and maintenance in a waterfall team, raised code quality standards, and helped exceed production targets. [cite: 7]
-      technologies:
-        - Java
-        - JavaScript
-        - SQL
-        - Spring Framework
-        - JBoss
-        - Tomcat
+        - Contributed to software development and maintenance in a waterfall team, raised code quality standards, and helped exceed production targets.
+      technologies: Java | JavaScript | SQL | Spring Framework | JBoss | Tomcat | Azure DevOps | Waterfall
     - title: Production Team Lead
       company: Euro-Yser - Chemical Products
       year: 2018 - 2020
       description:
-        - [cite_start]Managed daily operations, ensured safety compliance, and optimized workflows for greater efficiency. [cite: 8]
+        - Managed daily operations, ensured safety compliance, and optimized workflows for greater efficiency.
     - title: Quality Assurance Manager
       company: Euro-Yser - Chemical Products
       year: 2013 - 2018
       description:
-        - [cite_start]Established quality standards that improved product reliability and led a team to consistently meet production goals. [cite: 9]
+        - Established quality standards that improved product reliability and led a team to consistently meet production goals.
     - title: Process Engineer
       company: Euro-Yser - Chemical Products
       year: 2010 - 2013
       description:
-        - [cite_start]Designed and optimized production processes, improving output and reducing costs. [cite: 10]
+        - Designed and optimized production processes, improving output and reducing costs.
 
 - title: Skills
   type: map
@@ -94,12 +75,16 @@
 - title: Education
   type: time_table
   contents:
-    - title: Bachelor's in Software Engineering (180 ECTS, Grade: 17/20, A)
+    - title: Bachelor's in Software Engineering
       institution: Universidade Aberta
+      ECTS: 180
       year: 2021 - 2024
-    - title: Licenciate Degree in Chemical Engineering (300 ECTS, Grade: 14/20)
+      grade: 17/20 (A)
+    - title: Licenciate Degree in Chemical Engineering
       institution: Universidade de Aveiro
+      ECTS: 300
       year: 1999 - 2007
+      grade: 14/20
     - title: Full-Stack Programming Bootcamp (14-Week Intensive & Immersive)
       institution: <Academia de Código_>
       year: 2020
