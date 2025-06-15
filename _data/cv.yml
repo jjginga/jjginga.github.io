@@ -34,7 +34,9 @@
        - Optimize processes through automation while providing system maintenance and support.
        - Manage functional testing to ensure quality and develop user training materials.
        - Oversee multiple projects, adjusting timelines and priorities to deliver impactful results.
-      technologies: Distributed Systems | Informix 4GL | SQL | GitLab | Jira | Linux | Data Modeling | Requirements Gathering | Functional Analysis
+       - title: Technologies/Skills
+         contents:
+         - Distributed Systems | Informix 4GL | SQL | GitLab | Jira | Linux | Data Modeling | Requirements Gathering | Functional Analysis
     - title: Software Developer & Configuration Manager
       institution: BNP Paribas Security Services
       year: 2021 - 2024 
@@ -64,7 +66,7 @@
     - title: Chemical Engineer
       institution: Euro-Yser - Chemical Products
       year: 2009 - 2019
-      contents:
+      description:
         - Progressed through various roles, contributing to process engineering, quality assurance, and production team leadership.
         - Production Team Lead - 2018 - Led team to exceed production targets through strategic planning and resource allocation, fostering an environment where all members excel and thrive.
         - Quality Assurance Manager - 2013 - Elevated quality standards, leading initiatives that fostered a deep sense of pride and ownership among team members. Developed and enforced rigorous quality protocols that consistently exceeded company expectations.Elevated quality standards, fostering pride and ownership among team members. Developed and enforced rigorous quality protocols that exceeded company expectations.
@@ -78,14 +80,14 @@
       institution: Universidade Aberta 
       year: 2021 - 2024
       contents:
-        - ects: 180
-        - grade: 17/20 (A)
+        - ects - 180
+        - grade - 17/20 (A)
     - title: <a href="https://www.ua.pt/" target="_blank">Chemical Engineering</a>
       institution: Universidade de Aveiro
       year: 1999 - 2007
       contents:
-        - ects: 300
-        - grade: 14/20 (B)
+        - ects - 300
+        - grade - 14/20 (B)
 
 - title: Professional Tools and Technologies
   type: list
