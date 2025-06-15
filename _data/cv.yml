@@ -25,7 +25,7 @@
   type: time_table
   contents:
     - title: IT Specialist
-      company: The Navigator Company
+      institution: The Navigator Company
       year: 2024 - Present
       description:
        - Lead project development from conception to implementation to meet business needs.
@@ -36,7 +36,7 @@
        - Oversee multiple projects, adjusting timelines and priorities to deliver impactful results.
        - title: Technologies/Skills
          contents:
-         - Distributed Systems | Informix 4GL | SQL | GitLab | Jira | Linux | Data Modeling | Requirements Gathering | Functional Analysis
+           - Distributed Systems | Informix 4GL | SQL | GitLab | Jira | Linux | Data Modeling | Requirements Gathering | Functional Analysis
     - title: Software Developer & Configuration Manager
       institution: BNP Paribas Security Services
       year: 2021 - 2024 
@@ -46,7 +46,7 @@
         - Led cross-functional collaboration between development, operations, and quality teams in a 20-person Agile environment.
         - Drove continuous improvement by optimizing database performance, ensuring system stability, and automating configuration management.
         - title: Technologies/Skills
-          contents: 
+          contents:
           - Java | t-sql | sql | linux | Shell Script
           - Agile/Scrum | Jira | Confluence
           - Jenkins | GitLab | Maven | Tomcat
@@ -79,13 +79,13 @@
     - title: <a href="https://guiadoscursos.uab.pt/cursos/licenciatura-em-engenharia-informatica/?lang=en" target="_blank">Informatics Engineering</a>
       institution: Universidade Aberta 
       year: 2021 - 2024
-      contents:
+      description:
         - ects - 180
         - grade - 17/20 (A)
     - title: <a href="https://www.ua.pt/" target="_blank">Chemical Engineering</a>
       institution: Universidade de Aveiro
       year: 1999 - 2007
-      contents:
+      description:
         - ects - 300
         - grade - 14/20 (B)
 
