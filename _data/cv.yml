@@ -28,27 +28,21 @@
       company: The Navigator Company
       year: 2024 - Present
       description:
-       - Lead the development of projects from conception to implementation, ensuring precision at each stage to meet business needs.
-       - Perform requirements gathering and analysis, translating stakeholder expectations into feasible technical solutions.
-       - Responsible for process modeling, functional documentation, and mediation between business areas and the technical team.
-       - Proactively implement process optimizations through automation, alongside providing system maintenance and support.
-       - Manage functional testing and homologation, ensuring the quality of deliverables, and develop training materials for users.
-       - Oversee multiple simultaneous projects, adjusting timelines and priorities to achieve impactful results.
+       - Lead project development from conception to implementation to meet business needs.
+       - Analyze requirements and translate stakeholder expectations into technical solutions.
+       - Model processes, create functional documentation, and mediate between business and technical teams.
+       - Optimize processes through automation while providing system maintenance and support.
+       - Manage functional testing to ensure quality and develop user training materials.
+       - Oversee multiple projects, adjusting timelines and priorities to deliver impactful results.
       technologies: Distributed Systems | Informix 4GL | SQL | GitLab | Jira | Linux | Data Modeling | Requirements Gathering | Functional Analysis
     - title: Software Developer & Configuration Manager
       institution: BNP Paribas Security Services
       year: 2021 - 2024 
       description:
-        - Developed new features and enhancements for a monolithic application that processed large volumes of data daily.
-        - Applied Object‑Oriented Programming (OOP) principles to improve application structure and maintainability.
-        - Designed and implemented database stored procedures and queries using Transact‑SQL (T-SQL) and SQL, optimizing performance.
-        - Ensured system stability by contributing to maintenance and repair efforts.
-        - Integrated DevOps practices using GitLab, Jenkins, and Confluence to improve development efficiency.
-        - Worked within a 20‑person Agile/Scrum team, actively participating in standups, sprint planning, and retrospectives.
-        - Reviewed and implemented a Git strategy to streamline code integration, version control, and deployment processes.
-        - Managed repository structures and coordinated software package preparation and deployment for efficient release management.
-        - Led cross‑functional collaboration among development, operations, and quality teams to ensure seamless delivery.
-        - Drove continuous improvement initiatives by adopting best practices in configuration management and automation.
+        - Developed and enhanced a high-volume data processing application using Java, OOP principles, and SQL.
+        - Managed the full configuration lifecycle, implementing Git strategies and deploying software packages using GitLab and Jenkins.
+        - Led cross-functional collaboration between development, operations, and quality teams in a 20-person Agile environment.
+        - Drove continuous improvement by optimizing database performance, ensuring system stability, and automating configuration management.
         - title: Technologies/Skills
           contents: 
           - Java | t-sql | sql | linux | Shell Script
@@ -80,14 +74,18 @@
 - title: Education
   type: time_table
   contents:
-    - title: <a href="https://guiadoscursos.uab.pt/cursos/licenciatura-em-engenharia-informatica/?lang=en" target="_blank">Informatics Engineering (180 ECTS)</a>
+    - title: <a href="https://guiadoscursos.uab.pt/cursos/licenciatura-em-engenharia-informatica/?lang=en" target="_blank">Informatics Engineering</a>
       institution: Universidade Aberta 
       year: 2021 - 2024
-      grade: 17/20 (A)
-    - title: <a href="https://www.ua.pt/" target="_blank">Chemical Engineering (300 ECTS)</a>
+      contents:
+        - ects: 180
+        - grade: 17/20 (A)
+    - title: <a href="https://www.ua.pt/" target="_blank">Chemical Engineering</a>
       institution: Universidade de Aveiro
-      grade: 14/20
       year: 1999 - 2007
+      contents:
+        - ects: 300
+        - grade: 14/20 (B)
 
 - title: Professional Tools and Technologies
   type: list
