@@ -81,13 +81,13 @@
       year: 2021 - 2024
       description:
         - ects - 180
-        - grade - 17/20 (A)
+        - final classification - 17 (Portuguese System), equivalent to ECTS grade A
     - title: <a href="https://www.ua.pt/" target="_blank">Chemical Engineering</a>
       institution: Universidade de Aveiro
       year: 1999 - 2007
       description:
         - ects - 300
-        - grade - 14/20 (B)
+        - final classification - 14 (Portuguese System)
 
 - title: Professional Tools and Technologies
   type: list
