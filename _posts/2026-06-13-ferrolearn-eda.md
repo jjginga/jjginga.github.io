@@ -43,13 +43,14 @@ the eda runs entirely in rust compiled to wasm — the rust code parses the csv,
 **the target is well-behaved.**
 
 ![rings histogram]({{ site.baseurl }}/assets/img/ferrolearn-eda-rings.png)
-![rings histogram]({{ site.baseurl }}/assets/img/ferrolearn-eda-rings2.png)
+
 
 the rings histogram is roughly bell-shaped, centred around 9–10 rings (10.5–11.5 years), with a modest right tail out to 29. this is good news for linear regression — we're not fighting a heavily skewed or bimodal target. it won't be trivial either: there's genuine spread, and the upper tail thins out fast, which means the model will see very few examples of old abalone.
 
 **the physical measurements are spread but not exotic.**
 
 ![feature histograms]({{ site.baseurl }}/assets/img/ferrolearn-eda-features.png)
+![feature histograms]({{ site.baseurl }}/assets/img/ferrolearn-eda-features2.png)
 
 most features follow a roughly bell-shaped distribution centred on mid-range values. height stands out: there are a handful of samples with values near zero or suspiciously large. the uci page notes that missing-value examples were removed, but doesn't mention measurement errors in height specifically. for now i've kept them — the rust parser validates field count and type but doesn't filter by range — but it's worth knowing they're there.
 
@@ -76,3 +77,7 @@ than letting them cancel out. we'll implement gradient descent with both l1 and 
 
 
 next post: linear regression, from scratch, with a gradient descent animation.
+
+---
+
+**source code:** [github.com/jjginga/ferrolearn](https://github.com/jjginga/ferrolearn){:target="_blank"}

@@ -33,3 +33,7 @@ the plan is to cover these algorithms, roughly in course order:
 each post pairs with a live demo you can interact with directly in the browser. the rust code compiles to wasm via [wasm-pack](https://rustwasm.github.io/wasm-pack/) and the demos are built with vanilla js and d3. no framework, no bundler — just a script tag and a canvas.
 
 i'm also learning rust as i go, so expect the posts to spend time on the language itself alongside the maths.
+
+---
+
+**source code:** [github.com/jjginga/ferrolearn](https://github.com/jjginga/ferrolearn){:target="_blank"}
