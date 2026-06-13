@@ -21,7 +21,7 @@ the problem is this: how old is an abalone? you can find out exactly by cutting 
 
 the dataset has 4177 samples and 8 features: sex (male, female, or infant), longest shell length, diameter perpendicular to length, height with meat in shell, whole weight, shucked weight (meat only), viscera weight (gut after bleeding), and shell weight after drying. **the target is the ring count**.
 
-![abalone shell]({{ site.baseurl }}/assets/img/abalone-shell.jpg)
+![abalone]({{ site.baseurl }}/assets/img/abalone.jpg)
 
 ## why eda first
 
