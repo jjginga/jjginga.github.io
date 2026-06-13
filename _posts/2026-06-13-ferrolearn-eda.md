@@ -33,7 +33,7 @@ these aren't rhetorical questions. the answers change what you build.
 
 the eda below runs entirely in rust compiled to wasm. the rust code parses the csv, computes summary statistics, and calculates the correlation matrix — all client-side. d3 handles the visualisation.
 
-<div style="width:100%; height:700px; border:1px solid #ddd; border-radius:4px; overflow:hidden;">
+<div style="width:100%; height:1400px; border:1px solid #ddd; border-radius:4px; overflow:hidden;">
   <iframe 
     src="https://jjginga.github.io/ferrolearn/web/demos/abalone_eda/" 
     style="width:100%; height:100%; border:none;"
