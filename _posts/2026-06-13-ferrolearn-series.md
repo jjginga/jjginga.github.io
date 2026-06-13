@@ -16,7 +16,7 @@ the plan is to cover these algorithms, roughly in course order:
 
 | # | algorithm | status |
 |---|-----------|--------|
-| 0 | exploratory data analysis | ✅ done |
+| 0 | [exploratory data analysis](/blog/2026/ferrolearn-eda/) | ✅ done |
 | 1 | linear regression | coming soon |
 | 2 | logistic regression | — |
 | 3 | k-nearest neighbours | — |
@@ -28,6 +28,7 @@ the plan is to cover these algorithms, roughly in course order:
 | 9 | multilayer perceptron | — |
 | 10 | genetic algorithms | — |
 | 11 | deep q-network | — |
+
 
 each post pairs with a live demo you can interact with directly in the browser. the rust code compiles to wasm via [wasm-pack](https://rustwasm.github.io/wasm-pack/) and the demos are built with vanilla js and d3. no framework, no bundler — just a script tag and a canvas.
 
