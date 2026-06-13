@@ -43,6 +43,7 @@ the eda runs entirely in rust compiled to wasm — the rust code parses the csv,
 **the target is well-behaved.**
 
 ![rings histogram]({{ site.baseurl }}/assets/img/ferrolearn-eda-rings.png)
+![rings histogram]({{ site.baseurl }}/assets/img/ferrolearn-eda-rings2.png)
 
 the rings histogram is roughly bell-shaped, centred around 9–10 rings (10.5–11.5 years), with a modest right tail out to 29. this is good news for linear regression — we're not fighting a heavily skewed or bimodal target. it won't be trivial either: there's genuine spread, and the upper tail thins out fast, which means the model will see very few examples of old abalone.
 
