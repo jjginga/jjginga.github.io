@@ -21,26 +21,26 @@ The starting point is the same as linear regression: compute a weighted sum of t
 
 $$z = \tilde{X}\tilde{w}$$
 
-This is the **linear part** — the same bias-augmented matrix-vector product, where $\tilde{X} \in \mathbb{R}^{m \times (n+1)}$ has a leading ones column and $\tilde{w} \in \mathbb{R}^{n+1}$ holds the bias as its first element. The result $z \in \mathbb{R}^m$ is one score per sample.
+This is the **linear part** — the same bias-augmented matrix-vector product, where $$\tilde{X} \in \mathbb{R}^{m \times (n+1)}$$ has a leading ones column and $$\tilde{w} \in \mathbb{R}^{n+1}$$ holds the bias as its first element. The result $$z \in \mathbb{R}^m$$ is one score per sample.
 
-The problem: $z$ is unbounded — it can be any real number. A probability must live in $[0, 1]$. We need a function that squashes $\mathbb{R}$ into $(0, 1)$ without losing the ordering (a higher score should still mean a higher
+The problem: $$z$$ is unbounded — it can be any real number. A probability must live in $$[0, 1]$$. We need a function that squashes $$\mathbb{R}$$ into $$(0, 1)$$ without losing the ordering (a higher score should still mean a higher
 probability). The **sigmoid function** does exactly this:
 
 $$\sigma(z) = \frac{1}{1 + e^{-z}}$$
 
-It has an S-shaped curve: as $z \to +\infty$, $\sigma(z) \to 1$; as $z \to -\infty$, $\sigma(z) \to 0$; and $\sigma(0) = 0.5$ exactly. It is smooth, monotonic, and its derivative has a clean form — $\sigma(z)(1 - \sigma(z))$ — which will matter when we compute the gradient.
+It has an S-shaped curve: as $$z \to +\infty$$, $$\sigma(z) \to 1$$; as $$z \to -\infty$$, $$\sigma(z) \to 0$$; and $$\sigma(0) = 0.5$$ exactly. It is smooth, monotonic, and its derivative has a clean form — $$\sigma(z)(1 - \sigma(z))$$ — which will matter when we compute the gradient.
 
 The full model is then:
 
 $$\hat{y} = \sigma(\tilde{X}\tilde{w})$$
 
-where $\hat{y}_i \in (0, 1)$ is the estimated probability that sample $i$ is male.
+where $$\hat{y}_i \in (0, 1)$$ is the estimated probability that sample $$i$$ is male.
 
 **Decision boundary.** To produce a hard class label, we threshold at 0.5:
 
 $$\text{class}(i) = \begin{cases} \text{M} & \hat{y}_i \geq 0.5 \\ \text{F} & \hat{y}_i < 0.5 \end{cases}$$
 
-Since $\sigma(z) = 0.5$ when $z = 0$, the decision boundary is the set of points where $\tilde{X}\tilde{w} = 0$ — a hyperplane in feature space. Every point on one side gets classified as male, every point on the other as female. This is what makes logistic regression a **linear classifier**: the boundary it can draw is always a straight line (or flat hyperplane in higher dimensions). It cannot draw a curve.
+Since $$\sigma(z) = 0.5$$ when $$z = 0$$, the decision boundary is the set of points where $$\tilde{X}\tilde{w} = 0$$ — a hyperplane in feature space. Every point on one side gets classified as male, every point on the other as female. This is what makes logistic regression a **linear classifier**: the boundary it can draw is always a straight line (or flat hyperplane in higher dimensions). It cannot draw a curve.
 
 The threshold of 0.5 is the natural default — predict male when male is more probable than not. A different threshold would make sense if false positives and false negatives had asymmetric costs (medical diagnosis, fraud detection), but here we have no reason to prefer one error over the other.
 
@@ -56,7 +56,7 @@ We are regressing on the log-odds (the logit). The sigmoid is the inverse logit 
 
 With the model defined, we need a way to measure how wrong it is. The natural candidate is the same mean squared error we used for linear regression — but MSE is a poor fit for classification.
 
-The problem is the sigmoid. When the model makes a confidently wrong prediction — say it outputs $\hat{y} = 0.001$ for a true male — the sigmoid is deep in its flat region and its gradient is nearly zero. MSE combined with the sigmoid produces a loss surface with near-zero gradients for the worst predictions: the errors we most want to correct get the weakest signal. There is a second problem: mean squared error wrapped around a sigmoid is **non-convex** in the weights, so gradient descent can settle into a local minimum that isn't the best fit. Binary cross-entropy paired with the sigmoid is convex — a single global minimum — which is why the loss curves descend cleanly to one place no matter where the weights start.
+The problem is the sigmoid. When the model makes a confidently wrong prediction — say it outputs $$\hat{y} = 0.001$$ for a true male — the sigmoid is deep in its flat region and its gradient is nearly zero. MSE combined with the sigmoid produces a loss surface with near-zero gradients for the worst predictions: the errors we most want to correct get the weakest signal. There is a second problem: mean squared error wrapped around a sigmoid is **non-convex** in the weights, so gradient descent can settle into a local minimum that isn't the best fit. Binary cross-entropy paired with the sigmoid is convex — a single global minimum — which is why the loss curves descend cleanly to one place no matter where the weights start.
 
 Instead we use **binary cross-entropy** (also called log loss):
 
@@ -64,20 +64,20 @@ $$\mathcal{L} = -\frac{1}{m} \sum_{i=1}^{m} \left[ y_i \log \hat{y}_i + (1 - y_i
 
 The formula has two terms that never fire at the same time:
 
-- When $y_i = 1$ (male): loss is $-\log \hat{y}_i$. This is large when   $\hat{y}_i$ is close to 0 and approaches zero as $\hat{y}_i \to 1$. 
-- When $y_i = 0$ (female): loss is $-\log(1 - \hat{y}_i)$. This is large when $\hat{y}_i$ is close to 1 and approaches zero as $\hat{y}_i \to 0$.
+- When $$y_i = 1$$ (male): loss is $$-\log \hat{y}_i$$. This is large when   $$\hat{y}_i$$ is close to 0 and approaches zero as $$\hat{y}_i \to 1$$. 
+- When $$y_i = 0$$ (female): loss is $$-\log(1 - \hat{y}_i)$$. This is large when $$\hat{y}_i$$ is close to 1 and approaches zero as $$\hat{y}_i \to 0$$.
 
-**Why "cross-entropy"?** The name comes from information theory. The cross-entropy between a true distribution $p$ and a predicted distribution $q$ is $H(p, q) = -\sum p \log q$ — the average number of bits needed to encode outcomes drawn from $p$ using a code optimized for $q$. For a single sample the true distribution is one-hot: all the probability mass sits on the actual class. The sum over the two classes collapses to a single term — $-\log \hat{y}_i$ when the label is male, $-\log(1 - \hat{y}_i)$ when female — which is exactly the per-sample loss above. Minimizing binary cross-entropy means minimizing the bits wasted by predicting $\hat{y}$ when the truth is $y$; it reaches zero only when the predicted distribution matches the labels exactly. Equivalently, it minimizes the KL divergence from the true distribution to the predicted one.
+**Why "cross-entropy"?** The name comes from information theory. The cross-entropy between a true distribution $$p$$ and a predicted distribution $$q$$ is $$H(p, q) = -\sum p \log q$$ — the average number of bits needed to encode outcomes drawn from $$p$$ using a code optimized for $$q$$. For a single sample the true distribution is one-hot: all the probability mass sits on the actual class. The sum over the two classes collapses to a single term — $$-\log \hat{y}_i$$ when the label is male, $$-\log(1 - \hat{y}_i)$$ when female — which is exactly the per-sample loss above. Minimizing binary cross-entropy means minimizing the bits wasted by predicting $$\hat{y}$$ when the truth is $$y$$; it reaches zero only when the predicted distribution matches the labels exactly. Equivalently, it minimizes the KL divergence from the true distribution to the predicted one.
 
-The key property is that the penalty grows without bound as the model becomes more confidently wrong. If the model assigns $\hat{y} = 0.001$ to a true male, the loss is $-\log(0.001) \approx 6.9$. If it assigns $\hat{y} = 0.5$, the loss is $-\log(0.5) \approx 0.69$ — the starting point you see in the loss evolution chart.
+The key property is that the penalty grows without bound as the model becomes more confidently wrong. If the model assigns $$\hat{y} = 0.001$$ to a true male, the loss is $$-\log(0.001) \approx 6.9$$. If it assigns $$\hat{y} = 0.5$$, the loss is $$-\log(0.5) \approx 0.69$$ — the starting point you see in the loss evolution chart.
 
-In practice, $\hat{y}$ is clamped away from 0 and 1 by a small epsilon (here $10^{-15}$) to avoid $\log(0) = -\infty$.
+In practice, $$\hat{y}$$ is clamped away from 0 and 1 by a small epsilon (here $$10^{-15}$$) to avoid $$\log(0) = -\infty$$.
 
-**Where it comes from.** Binary cross-entropy is not an arbitrary choice — it falls out of maximum likelihood. The model treats each label as a Bernoulli draw with probability $\hat{y}_i$:
+**Where it comes from.** Binary cross-entropy is not an arbitrary choice — it falls out of maximum likelihood. The model treats each label as a Bernoulli draw with probability $$\hat{y}_i$$:
 
 $$P(y_i \mid x_i) = \hat{y}_i^{\,y_i}\,(1 - \hat{y}_i)^{1 - y_i}$$
 
-The exponents act as a switch: the expression is $\hat{y}_i$ when $y_i = 1$ and $1 - \hat{y}_i$ when $y_i = 0$. Assuming the samples are independent, the likelihood of the whole dataset is the product $\prod_{i=1}^{m} P(y_i \mid x_i)$. Taking the log turns the product into a sum, then negating and averaging gives:
+The exponents act as a switch: the expression is $$\hat{y}_i$$ when $$y_i = 1$$ and $$1 - \hat{y}_i$$ when $$y_i = 0$$. Assuming the samples are independent, the likelihood of the whole dataset is the product $$\prod_{i=1}^{m} P(y_i \mid x_i)$$. Taking the log turns the product into a sum, then negating and averaging gives:
 
 $$-\frac{1}{m} \sum_{i=1}^{m} \left[ y_i \log \hat{y}_i + (1 - y_i) \log(1 - \hat{y}_i) \right]$$
 
@@ -91,7 +91,7 @@ To minimize the loss we need its gradient with respect to the weights — the di
 
 $$\frac{\partial \mathcal{L}}{\partial \tilde{w}_j} = -\frac{1}{m} \sum_{i=1}^{m} \left[ \frac{y_i}{\hat{y}_i} - \frac{1 - y_i}{1 - \hat{y}_i} \right] \frac{\partial \hat{y}_i}{\partial \tilde{w}_j}$$
 
-The sigmoid derivative is $\frac{\partial \sigma}{\partial z} = \sigma(z)(1 - \sigma(z)) = \hat{y}_i(1 - \hat{y}_i)$, so:
+The sigmoid derivative is $$\frac{\partial \sigma}{\partial z} = \sigma(z)(1 - \sigma(z)) = \hat{y}_i(1 - \hat{y}_i)$$, so:
 
 $$\frac{\partial \hat{y}_i}{\partial \tilde{w}_j} = \hat{y}_i(1 - \hat{y}_i)\, \tilde{x}_{ij}$$
 
@@ -103,7 +103,7 @@ In matrix form:
 
 $$\nabla_{\tilde{w}} \mathcal{L} = \frac{1}{m} \tilde{X}^\top (\hat{y} - y)$$
 
-This is identical in form to the linear regression gradient — residuals projected back through the feature matrix. The sigmoid derivative $\hat{y}(1 - \hat{y})$ cancels exactly with the denominator from the log inthe loss. This is not a coincidence: binary cross-entropy was designed to pair with the sigmoid precisely because of this cancellation. It gives clean gradients even when the model is confidently wrong.
+This is identical in form to the linear regression gradient — residuals projected back through the feature matrix. The sigmoid derivative $$\hat{y}(1 - \hat{y})$$ cancels exactly with the denominator from the log inthe loss. This is not a coincidence: binary cross-entropy was designed to pair with the sigmoid precisely because of this cancellation. It gives clean gradients even when the model is confidently wrong.
 
 The update rule is the same as before:
 
@@ -139,31 +139,31 @@ that accuracy is a fair metric here. A model stuck at 54% is not learning; it is
 
 ## k-fold cross-validation
 
-Same mechanism as in [linear regression](https://jjginga.com/blog/2026/ferrolearn-linear_regression/#k-fold-cross-validation), with $k = 5$. The only change is the metric: instead of minimizing RMSE, we maximize accuracy. The cross-validation function is generic over the scoring metric via a closure — no structural change was needed to support classification.
+Same mechanism as in [linear regression](https://jjginga.com/blog/2026/ferrolearn-linear_regression/#k-fold-cross-validation), with $$k = 5$$. The only change is the metric: instead of minimizing RMSE, we maximize accuracy. The cross-validation function is generic over the scoring metric via a closure — no structural change was needed to support classification.
 
 ---
 
 ## regularization
 
-Same L1 and L2 penalties as in [linear regression](https://jjginga.com/blog/2026/ferrolearn-linear_regression/#regularization), with one difference: the regularization term is scaled by $\frac{\lambda}{m}$ rather than bare $\lambda$:
+Same L1 and L2 penalties as in [linear regression](https://jjginga.com/blog/2026/ferrolearn-linear_regression/#regularization), with one difference: the regularization term is scaled by $$\frac{\lambda}{m}$$ rather than bare $$\lambda$$:
 
 $$\nabla_{\tilde{w}} \mathcal{L}_\text{reg} = \nabla_{\tilde{w}} \mathcal{L} + \frac{\lambda}{m} \cdot \begin{cases} w_j & \text{L2} \\ \text{sign}(w_j) & \text{L1} \end{cases}$$
 
-The gradient already divides by $m$, so the penalty must be on the same scale. Without this, the effective regularization strength would grow with dataset size.
+The gradient already divides by $$m$$, so the penalty must be on the same scale. Without this, the effective regularization strength would grow with dataset size.
 
 ---
 
 ## grid search
 
-Same procedure as in [linear regression](https://jjginga.com/blog/2026/ferrolearn-linear_regression/#grid-search), searching 30 log-spaced $\lambda$ values from $10^{-6}$ to $10^{1}$ via 5-fold cross-validation. The only difference: we select the $\lambda$ with the **highest** average validation accuracy rather than the lowest RMSE — the optimization direction flips for classification.
+Same procedure as in [linear regression](https://jjginga.com/blog/2026/ferrolearn-linear_regression/#grid-search), searching 30 log-spaced $$\lambda$$ values from $$10^{-6}$$ to $$10^{1}$$ via 5-fold cross-validation. The only difference: we select the $$\lambda$$ with the **highest** average validation accuracy rather than the lowest RMSE — the optimization direction flips for classification.
 
 ---
 
-> **a note on running time.** with $\alpha = 0.01$ and 5,000 epochs, a 
+> **a note on running time.** with $$\alpha = 0.01$$ and 5,000 epochs, a 
 > single training run converges in a few seconds in the browser. grid search
-> trains 5 models per $\lambda$ across 30 values — use the **cv epochs**
+> trains 5 models per $$\lambda$$ across 30 values — use the **cv epochs**
 > slider (default: 5,000) to control the cost. fewer iterations are enough
-> to rank $\lambda$ values reliably without full convergence.
+> to rank $$\lambda$$ values reliably without full convergence.
 
 ---
 
@@ -175,7 +175,7 @@ Same procedure as in [linear regression](https://jjginga.com/blog/2026/ferrolear
 
 **Loss evolution**
 
-The loss starts at 0.693 — exactly $\ln 2$, the binary cross-entropy of a model that assigns 0.5 to every sample regardless of its features. This is the random-guess baseline for a balanced binary problem, and it is where logistic regression begins: all weights at zero, all predictions at 0.5.
+The loss starts at 0.693 — exactly $$\ln 2$$, the binary cross-entropy of a model that assigns 0.5 to every sample regardless of its features. This is the random-guess baseline for a balanced binary problem, and it is where logistic regression begins: all weights at zero, all predictions at 0.5.
 
 <img src="{{ site.baseurl }}/assets/img/ferrolearn-logreg-loss_evolution.png"
      style="max-width: 420px; display: block; margin: 2rem auto;">
@@ -220,7 +220,7 @@ Each bar shows the weight assigned to that feature after training. Positive weig
 
 **Grid search — λ vs validation accuracy**
 
-The curve is completely flat: every λ from $10^{-6}$ to $10^{1}$ gives the same ~56% validation accuracy. The best λ = 0.356 is selected by the grid search but the margin over any other value is negligible.
+The curve is completely flat: every λ from $$10^{-6}$$ to $$10^{1}$$ gives the same ~56% validation accuracy. The best λ = 0.356 is selected by the grid search but the margin over any other value is negligible.
 
 <img src="{{ site.baseurl }}/assets/img/ferrolearn-logreg-grid_search.png"
      style="max-width: 420px; display: block; margin: 2rem auto;">
@@ -271,6 +271,6 @@ This is not a failure of the implementation. It is an honest result: the model c
 
 ---
 
-→ [open the interactive demo](https://jjginga.github.io/ferrolearn/web/demos/linear_regression/){:target="_blank"}
+→ [open the interactive demo](https://jjginga.com/ferrolearn/web/demos/logistic_regression/){:target="_blank"}
 
 **source code:** [github.com/jjginga/ferrolearn](https://github.com/jjginga/ferrolearn){:target="_blank"}
