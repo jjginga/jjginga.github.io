@@ -31,9 +31,11 @@ $$\hat{y} = \tilde{X}\tilde{w}$$
 
 where $$\tilde{X} \in \mathbb{R}^{m \times (n+1)}$$ has a leading ones column and $$\tilde{w} \in \mathbb{R}^{n+1}$$ holds the bias as its first element. There is now only one vector to optimize — no separate bias term to track.
 
-We measure fit with the **sum of squared residuals**:
+We measure fit with the **mean squared error**, carrying a factor of ½ that cancels the 2 from differentiating the square and keeps the gradient clean:
 
-$$\mathcal{L} = \sum_{i=1}^{m} (\hat{y}_i - y_i)^2 = \|\tilde{X}\tilde{w} - y\|^2$$
+$$\mathcal{L} = \frac{1}{2m} \sum_{i=1}^{m} (\hat{y}_i - y_i)^2 = \frac{1}{2m}\|\tilde{X}\tilde{w} - y\|^2$$
+
+**A geometric view.** Minimizing squared error has a clean geometric meaning. Picture the target vector $$y$$ and every prediction the model *could* make — all of $$\tilde{X}\tilde{w}$$ as $$\tilde{w}$$ ranges over weight space. Those reachable predictions form a flat subspace: the column space of $$\tilde{X}$$. Least squares finds the point in that subspace closest to $$y$$ — the **orthogonal projection** of $$y$$ onto it. The residual $$y - \hat{y}$$ is what's left over, sticking out perpendicular to the subspace: it is everything about $$y$$ that no linear combination of the features can reach. Gradient descent walks toward that projection one step at a time; the normal equation jumps straight to it.
 
 ---
 
@@ -54,6 +56,8 @@ $$\tilde{w} \leftarrow \tilde{w} - \alpha \nabla_{\tilde{w}} \mathcal{L}$$
 An **epoch** is one complete cycle where every training sample has contributed to a gradient update. We repeat this process for hundreds or thousands of epochs, nudging the weights a little each time until the loss stops improving.
 
 $$\alpha$$ is the **learning rate** — a small positive number (typically between 0.0001 and 0.1) that controls how large each step is. Too large and the weights overshoot the minimum, causing the loss to oscillate or diverge. Too small and convergence is needlessly slow. It is a hyperparameter: we set it before training, not learned from data.
+
+**Why this works at all.** Mean squared error is a *convex* function of the weights — its loss surface is a single smooth bowl with one lowest point and no others. That is what makes gradient descent safe here: wherever the weights start, following the slope downhill leads to the same global minimum, with no local minima to get trapped in and no dependence on initialization. It is why we can set every weight to zero at the start and still converge. Many models later in this series — neural networks especially — give this up: their loss surfaces are riddled with local minima, and where you start genuinely matters.
 
 Note that we never compute $$(\tilde{X}^\top \tilde{X})^{-1} \tilde{X}^\top y$$ — the closed-form normal equation. It gives the exact optimum in one step but requires inverting an $$(n+1) \times (n+1)$$ matrix, which is $$O(n^3)$$ and numerically unstable for correlated features. Gradient descent scales to large $$n$$ and adapts naturally to regularization.
 
@@ -155,7 +159,7 @@ The tradeoff is the **bias-variance tradeoff**: increasing $$\lambda$$ introduce
 
 ## grid search
 
-$$\lambda$$ controls how strongly regularization penalizes large weights — but the right value depends on the data. Too small and it has no effect; too large and it shrinks all weights towards zero regardless of their predictive value. Grid search finds the best $$\lambda$$ automatically: we evaluate a range of values using 5-fold cross-validation and pick the one with the lowest average validation RMSE. The search space spans from $$10^{-6}$$ to $$10^{1}$$ in 30 log-spaced steps — logarithmic because the effect of regularization scales multiplicatively, not additively.
+$$\lambda$$ controls how strongly regularization penalizes large weights — but the right value depends on the data. Too small and it has no effect; too large and it shrinks all weights towards zero regardless of their predictive value. Grid search finds the best $$\lambda$$ automatically: we evaluate a range of values using 5-fold cross-validation and pick the one with the lowest average validation RMSE. The search space spans from $$10^{-6}$$ to $$10^{1}$$ in 30 log-spaced steps — logarithmic because the effect of regularization scales multiplicatively, not additively — plus $$\lambda = 0$$ prepended as a no-regularization baseline, for 31 candidates in total.
 
 ---
 
@@ -180,7 +184,7 @@ This chart shows how well the model fits the data as training progresses — one
      style="max-width: 420px; display: block; margin: 2rem auto;">
 
 
-Both lines start deeply negative (around −0.5). A negative R² means the model is actively worse than just predicting the average — which makes sense at epoch 0, when all weights are zero and every prediction is the same. As gradient descent adjusts the weights, R² climbs rapidly in the first ~3,000–5,000 iterations, then flattens. By 25,000 iterations the curves are completely flat — the model has converged and more iterations would change nothing.
+Both lines start deeply negative — around −9 on the training set and −12 on the validation set. A negative R² means the model is actively worse than just predicting the average, which makes sense at epoch 0: all weights are zero, so every prediction is zero — far below the ~10-ring average. As gradient descent adjusts the weights, R² climbs rapidly in the first ~3,000–5,000 iterations, then flattens. By 25,000 iterations the curves are completely flat — the model has converged and more iterations would change nothing.
 
 The final values: training R² ≈ 0.55, validation R² ≈ 0.43. The gap between them (~0.12) is mild but real — the the model fits the training data slightly better than it fits data it has never seen — this is expected, since the model was optimized on the training set and had no information about the validation set during training. With only 9 features and 4,177 samples this is not severe overfitting; it reflects the inherent noise in ring counting more than model complexity.
 
@@ -188,12 +192,12 @@ The final values: training R² ≈ 0.55, validation R² ≈ 0.43. The gap betwee
 
 **RMSE evolution**
 
-RMSE measures the average prediction error in the same unit as the target — rings. It starts around 11 rings at epoch 0: with all weights at zero, every prediction is roughly the mean, and the error is enormous. It drops steeply in the first 5,000 iterations as gradient descent finds the main signal in the data, then flattens. By 25,000 iterations both curves are flat — the model has converged.
+RMSE measures the average prediction error in the same unit as the target — rings. It starts around 11 rings at epoch 0: with all weights at zero, every prediction is zero, so each one misses by roughly a full target value — the error is enormous. (If the model instead predicted the mean, RMSE would be the ring standard deviation, about 3.3.). It drops steeply in the first 5,000 iterations as gradient descent finds the main signal in the data, then flattens. By 25,000 iterations both curves are flat — the model has converged.
 
 <img src="{{ site.baseurl }}/assets/img/ferrolearn-lr-rmse.png" 
      style="max-width: 420px; display: block; margin: 2rem auto;">
 
-Final values: train RMSE ≈ 2.2 rings, val RMSE ≈ 2.1 rings. Notably, validation RMSE ends up slightly *below* training RMSE — the opposite of what you might expect. This happens because the 80/20 split placed slightly easier samples in the validation set. It is not a sign the model generalises perfectly; the difference is small and the overall error level (off by ~2 rings on average) is the same story the R² chart tells.
+Final values: train RMSE ≈ 2.2 rings, val RMSE ≈ 2.1 rings. Notably, validation RMSE ends up slightly *below* training RMSE — the opposite of what you might expect. The cause is the split: it is taken contiguously (first 80% / last 20%, no shuffle), and the last fifth of the file happens to have a narrower spread of ring counts — standard deviation ≈ 2.7 versus ≈ 3.3 for the training portion. A lower-variance target is easier to predict in absolute terms, so RMSE comes out lower even though validation R² is *worse* (0.43 vs 0.55). It is not a sign the model generalises perfectly — shuffling before splitting would make the two sets match.
 
 ---
 

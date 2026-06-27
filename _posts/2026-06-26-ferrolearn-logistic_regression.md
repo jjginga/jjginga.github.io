@@ -71,6 +71,9 @@ The formula has two terms that never fire at the same time:
 
 The key property is that the penalty grows without bound as the model becomes more confidently wrong. If the model assigns $$\hat{y} = 0.001$$ to a true male, the loss is $$-\log(0.001) \approx 6.9$$. If it assigns $$\hat{y} = 0.5$$, the loss is $$-\log(0.5) \approx 0.69$$ — the starting point you see in the loss evolution chart.
 
+<img src="{{ site.baseurl }}/assets/img/ferrolearn-logreg-bce_penalty.png"
+     style="max-width: 460px; display: block; margin: 2rem auto;">
+
 In practice, $$\hat{y}$$ is clamped away from 0 and 1 by a small epsilon (here $$10^{-15}$$) to avoid $$\log(0) = -\infty$$.
 
 **Where it comes from.** Binary cross-entropy is not an arbitrary choice — it falls out of maximum likelihood. The model treats each label as a Bernoulli draw with probability $$\hat{y}_i$$:
