@@ -184,7 +184,7 @@ This chart shows how well the model fits the data as training progresses — one
      style="max-width: 420px; display: block; margin: 2rem auto;">
 
 
-Both lines start deeply negative — around −9 on the training set and −12 on the validation set. A negative R² means the model is actively worse than just predicting the average, which makes sense at epoch 0: all weights are zero, so every prediction is zero — far below the ~10-ring average. As gradient descent adjusts the weights, R² climbs rapidly in the first ~3,000–5,000 iterations, then flattens. By 25,000 iterations the curves are completely flat — the model has converged and more iterations would change nothing.
+Both lines start pinned at the bottom of the chart, around −0.5 — but that is a display floor, not the real value. The y-axis is clamped at −0.5, because the first epochs sit so far below the rest of the curve that showing them would flatten everything informative. With all weights at zero, every prediction is zero, so the true starting R² is much lower — roughly −9. A negative R² means the model is worse than simply predicting the average, which makes sense at epoch 0: predicting zero for a target that averages ~10 rings is far worse than predicting the mean. A negative R² means the model is actively worse than just predicting the average, which makes sense at epoch 0: all weights are zero, so every prediction is zero — far below the ~10-ring average. As gradient descent adjusts the weights, R² climbs rapidly in the first ~3,000–5,000 iterations, then flattens. By 25,000 iterations the curves are completely flat — the model has converged and more iterations would change nothing.
 
 The final values: training R² ≈ 0.55, validation R² ≈ 0.43. The gap between them (~0.12) is mild but real — the the model fits the training data slightly better than it fits data it has never seen — this is expected, since the model was optimized on the training set and had no information about the validation set during training. With only 9 features and 4,177 samples this is not severe overfitting; it reflects the inherent noise in ring counting more than model complexity.
 
@@ -248,7 +248,7 @@ Each row shows how much a feature's weight varies across the 5 CV folds. A tight
 <img src="{{ site.baseurl }}/assets/img/ferrolearn-lr-ws.png" 
      style="max-width: 420px; display: block; margin: 2rem auto;">
 
-Most features are stable: `shell_weight` clusters tightly around +0.9, `height` and `diameter` around +0.5, `sex_I` around −0.4. `shucked_weight` shows the most spread of any feature — one fold assigns it a weight close to zero while others push it to −0.5. This is the multicollinearity effect in action: `shucked_weight` and `shell_weight` carry overlapping information, and different training splits resolve that ambiguity differently.
+Most features are stable: `shell_weight` sits around +0.85, `height` around +0.5, `diameter` around +0.4, `sex_I` around −0.4, and `shucked_weight` around −0.5; the rest hug zero. The widest spreads belong to `height`, `shell_weight`, and `shucked_weight` — each varying by about ±0.1 across folds (`shucked_weight`, for instance, ranges from roughly −0.4 to −0.6, never near zero). That `shell_weight` and `shucked_weight` — the two opposite-sign mass measurements — are among the least stable is the multicollinearity effect in action: they carry overlapping information, so different training splits divide the credit between them differently.
 
 Note that these weights come from models trained for 5,000 iterations (the CV epochs setting), not 25,000 — they are partially converged. The multicollinearity signature is already visible but less extreme than in the fully trained model above.
 
@@ -266,6 +266,19 @@ This is exactly the motivation for the next models in the series. Tree-based met
 
 ---
 
+## references
+
+- James, G., Witten, D., Hastie, T., Tibshirani, R., and Taylor, J. *An Introduction to Statistical Learning with Applications in Python*. Springer, 2023. §3.1 (linear regression), §6.2 and §6.4 (regularization).
+
+- Hastie, T., Tibshirani, R., and Friedman, J. *The Elements of Statistical Learning*, 2nd ed. Springer, 2009. §3.1 and §3.2 (linear regression and least squares), §3.4 (regularization).
+
+- Géron, A. *Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow*, 3rd ed. O'Reilly, 2022. Chapter 4 (training models).
+
+- [Linear Regression in Machine Learning — GeeksForGeeks](https://www.geeksforgeeks.org/machine-learning/ml-linear-regression/)
+
+- [The Bias-Variance Tradeoff — Towards Data Science](https://towardsdatascience.com/the-bias-variance-tradeoff-cf18d3ec54f9/)
+
+---
 → [open the interactive demo](https://jjginga.github.io/ferrolearn/web/demos/linear_regression/){:target="_blank"}
 
 **source code:** [github.com/jjginga/ferrolearn](https://github.com/jjginga/ferrolearn){:target="_blank"}
