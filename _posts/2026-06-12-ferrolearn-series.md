@@ -19,8 +19,8 @@ the plan is to cover these algorithms, roughly in course order:
 | 0 | [exploratory data analysis](/blog/2026/ferrolearn-eda/) | ✅ done |
 | 1 | [linear regression](/blog/2026/ferrolearn-linear_regression/) | ✅ done |
 | 2 | [logistic regression](/blog/2026/ferrolearn-logistic_regression/) | ✅ done |
-| 3 | k-nearest neighbours | comming soon |
-| 4 | decision trees | — |
+| 3 | [k-nearest neighbours](/blog/2026/ferrolearn-k-nearest_neighbors/) | ✅ done |
+| 4 | decision trees | comming soon |
 | 5 | random forest | — |
 | 6 | adaboost | — |
 | 7 | support vector machines | — |
