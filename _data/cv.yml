@@ -24,9 +24,35 @@
 - title: Professional Experience
   type: time_table
   contents:
+      - title: Java Software Engineer
+      institution: BNP Paribas Securities Services (Outsourcing - HN Services)
+      year: 2026 - Present
+      description:
+        - Develop and maintain back-end features for banking systems using Java (17 and 8), Spring and Spring Boot 3, and JEE, applying design patterns such as MVC, Decorator and Facade.
+        - Perform technical analysis of new features raised during Sprint Planning, in a fully Agile environment (Daily, Planning, Iteration Review, Retrospective).
+        - Contribute to code quality through code reviews, pair programming and cross-testing of features developed by other team members.
+        - Support alignment between the Scrum Master and the development team, and collaborate with other teams on shared development efforts.
+        - title: Technologies/Skills
+          contents:
+          - Java 17/8 | Spring | Spring Boot 3 | JEE | SQL
+          - Apache Tomcat 8 | GitLab | IntelliJ | Eclipse
+          - Agile/Scrum | Design Patterns | Code Review | Pair Programming
+    - title: Java Software Developer
+      institution: Xplain Iberica (Madrid, Hybrid)
+      year: 2025 - 2026
+      description:
+        - Developed secure, high-performance back-end services and SOAP web services for Government & Public Security solutions (Justice, Police, Migration).
+        - Built stable Odoo ERP integrations to synchronize complex business data between the core case management system and external resource modules.
+        - Engineered advanced, type-safe search capabilities using QueryDSL and Jakarta Persistence (JPA), enabling dynamic filtering across complex relational datasets.
+        - Managed database schema evolution and version control with Flyway and Microsoft SQL Server, ensuring consistent deployments across environments.
+        - title: Technologies/Skills
+          contents:
+          - Java 17 | Spring Framework 6 | QueryDSL 6 | Hibernate 6 | JPA
+          - Microsoft SQL Server | Flyway | Odoo | SOAP | JUnit 4
+          - IntelliJ IDEA | SVN
     - title: IT Specialist
       institution: The Navigator Company
-      year: 2024 - Present
+      year: 2024 - 2025
       description:
        - Lead project development from conception to implementation to meet business needs.
        - Analyze requirements and translate stakeholder expectations into technical solutions.
@@ -76,6 +102,13 @@
 - title: Education
   type: time_table
   contents:
+    - title: <a href="https://www.urv.cat/en/studies/master/courses/computational-engineering-mathematics/" target="_blank">Computational Engineering and Mathematics (MSc)</a>
+      institution: Universitat Rovira i Virgili
+      year: 2025 - Present
+      description:
+        - ects - 60
+        - Applying advanced computing techniques to complex engineering and scientific problems, bridging software engineering and computational science.
+        - "Completed coursework: Numerical Methods in Engineering (9.1), Simulation (9.0), High-Performance Computing (9.1), Artificial Intelligence (8.8), Chaotic Dynamical Systems (8.4)"
     - title: <a href="https://guiadoscursos.uab.pt/cursos/licenciatura-em-engenharia-informatica/?lang=en" target="_blank">Informatics Engineering</a>
       institution: Universidade Aberta 
       year: 2021 - 2024
